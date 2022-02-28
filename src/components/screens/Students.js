@@ -1,0 +1,126 @@
+import React from 'react';
+import styled from 'styled-components';
+import Img1 from "../../assets/images/join-img.png";
+
+
+export default function Students() {
+  return (
+    <StudenntsSection>
+        <Wrapper>
+            <Container>
+                <LeftDiv>
+                    <Heading>How <Tefun>Students can join</Tefun></Heading>
+                    <ListItem>
+                        <List className="orange">
+                            <Description>Talrop-ന്റെ Web, Android,iOS പ്ലാറ്റ്ഫോമുകളിലൂടെ ( <Bold>www.yia.ai</Bold> ) ഓൺലൈനായി Tefun പ്രോഗ്രാമിന്റെ ഭാഗമാകാം.</Description>
+                            <Span>01</Span>
+                        </List>
+                        <List className="blue">
+                            <Description>വിദ്യാർത്ഥികൾക്ക് ലോഗിൻ ചെയ്ത് Tefun പ്രോഗ്രാം സ്റ്റാർട്ട് ചെയ്യാം</Description>
+                            <Span>02</Span>
+                        </List>
+                        <List className="green">
+                            <Description>Virtual സ്കൂളിങ്ങിലൂടെ വിദ്യാർത്ഥികൾക്ക് ഇഷ്ടമുള്ള സമയത്ത് ഇഷ്ട മുള്ള സ്ഥലത്തുവെച്ചു ക്ലാസ്സുകൾ കാണാൻ സാധിക്കും..</Description>
+                            <Span>03</Span>
+                        </List>
+                        <List className="blue">
+                            <Description>പ്രോഗ്രാം പൂർത്തിയാക്കിയതിനുശേഷം സ്കൂൾ മുഖാന്തരം..</Description>
+                            <Span className='last'>04</Span>
+                        </List>
+                    </ListItem>
+                </LeftDiv>
+                <RightDiv>
+                    <ImgContainer>
+                        <Img src={Img1} alt="Image" />
+                    </ImgContainer>
+                </RightDiv>
+            </Container>
+        </Wrapper>
+    </StudenntsSection>
+  )
+}
+
+const StudenntsSection = styled.section`
+    padding: 5% 0;
+`;
+const Wrapper = styled.div`
+    width: 80%;
+    margin: 0 auto;
+`;
+const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+const LeftDiv = styled.div`
+    width: 45%;
+`;
+const Heading = styled.h4`
+    margin: 0;
+    font-size: 38px;
+    color: #11a46e;
+    font-weight: 600;
+`;
+const Tefun = styled.h4`
+    margin: 0;
+    font-weight: 600;
+    color: #000;
+`;
+const Bold = styled.b`
+    color: #4f9877;
+`;
+const ListItem = styled.ul`
+    margin: 70px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+`;
+const List = styled.li`
+    &:last-child(4) {
+        margin-bottom: 0;
+    }
+
+`;
+const Description = styled.h5`
+    margin: 10px;
+    line-height: 1.8;
+    color: #4e5357;
+`;
+const Span = styled.span`
+    color: #4f9877;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    border: 3px solid #4f9877;
+    font-weight: 800;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 33px;
+    left: -6%;
+    background: #fff;
+    ::after {
+        content: "";
+        height: 94px;
+        position: absolute;
+        width: 1px;
+        border-left: 2px dotted #0fa76f;
+        top: 45px;
+    }
+
+`;
+const RightDiv = styled.div`
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 40%;
+`;
+const ImgContainer = styled.div`
+    top: 81px;
+    position: sticky;
+`;
+const Img = styled.img`
+    display: block;
+    width: 100%;
+`;
