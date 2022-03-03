@@ -70,7 +70,7 @@ function NewPassword(handleModal) {
     });
     return (
     <Container>
-        <Overlay></Overlay>
+    <Overlay></Overlay>
     <Section>
         <MainContainer>
             <TopContainer>
@@ -113,9 +113,7 @@ function NewPassword(handleModal) {
             <FooterDiv>
             <a href="#" className="term">Terms of service</a>
         </FooterDiv>
-        </MainContainer>
-        
-        
+        </MainContainer>  
     </Section>
     <CancelDiv to="/#">
         <Cancel src={Img7} alt="Image" />
@@ -124,11 +122,12 @@ function NewPassword(handleModal) {
     )
 }
 
+
 const Container = styled.div`
     width: 100%;
-    /* transform: scale(0, 0); */
-    backdrop-filter: blur(2px);
-    /* background: rgba(0, 0, 0, 0.2); */
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
 `;
 const Overlay = styled.div`
     position: absolute;
@@ -137,11 +136,12 @@ const Overlay = styled.div`
     width: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    filter: blur(1px);
+    filter: blur(2px);
 `;
 const Section =styled.div`
     width: 500px;
     padding: 0 50px;
+    background-color: #fff;
 `;
 const MainContainer = styled.div`
     text-align: left;
@@ -209,7 +209,6 @@ const EyeOpen = styled.img`
     display: ${({image})=> (image ? 'none' : 'block')};
     cursor: pointer;
 `;
-
 const LockImage = styled.img`
     position: absolute;
     width: 15px;
@@ -275,7 +274,14 @@ const Button = styled.button`
     height: 55px;
     color: #fff;
     cursor: pointer;   
-
+    &:hover {
+        background-image: linear-gradient(
+        to right,
+        #63bb4c 0%,
+        #40ab79 51%,
+        #1e9ba6 100%
+    );
+        }
 `;
 const FooterDiv = styled.div`
     text-align: center;

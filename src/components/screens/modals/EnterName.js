@@ -59,7 +59,7 @@ const BackContainer = styled.div`
   left: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 `;
 const Overlay = styled.div`
   position: absolute;
@@ -151,6 +151,7 @@ const NextButton = styled.button`
 const FooterDiv = styled.div`
   text-align: center;
   margin-top: 25px;
+  
 `;
 const CancelDiv = styled.div`
     width: 20px;

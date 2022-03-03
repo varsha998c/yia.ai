@@ -6,7 +6,7 @@ import Img2 from "../../assets/images/mobile-app.png";
 
 export default function Mobile_app() {
   return (
-    <Section>
+    <Section className="container">
         <Wrapper>
             <Container>
                 <DivLeft>

@@ -13,7 +13,7 @@ function ProfileModal({setIsModal, isModal}) {
         <Overlay></Overlay>
         <Wrapper>
             <Profile>
-              <IconDiv>
+              <IconDiv onClick={() => setIsModal(false)}>
                 <Img className='leftarrow' src={Img1} alt="Image" />
               </IconDiv>
               <H3>Profile</H3>

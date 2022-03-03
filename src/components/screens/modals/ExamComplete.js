@@ -19,7 +19,7 @@ function ExamComplete() {
                 </CongratsDiv>
                 <H2>Congratulations!</H2>
                 <Description>You have completed your examination .We will provide your certificate soon.</Description>
-                <Button>Go to Dashboard</Button>
+                <Button><a href="/" className='goto'>Go to Dashboard</a></Button>
             </InnerDiv>
         </Wrapper>
     </ExamCompleteSection>

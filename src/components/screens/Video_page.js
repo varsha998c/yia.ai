@@ -9,6 +9,8 @@ import Img7 from "../../assets/images/small.svg";
 import HeaderModal from '../screens/modals/HeaderModal';
 import ProfileModal from './modals/ProfileModal';
 import CollegeDetailView from './modals/CollegeDetailView';
+import {Link} from 'react-router-dom';
+
 
 
 export default function Video_page() {
@@ -233,7 +235,7 @@ export default function Video_page() {
       <>
     <HeaderModal setIsModal={setIsModal}/> 
     <ProfileModal isModal={isModal} setIsModal={setIsModal}/>
-    <VideoSection>
+    <VideoSection className="container">
         <AlertDiv>
             <AlertLeft>
                 <Image src={Img5} alt="Image" />
@@ -243,7 +245,9 @@ export default function Video_page() {
                 </ContentDiv>
             </AlertLeft>
             <AlertRight>
-                <Start>Start Now</Start>
+                <Link to="/exam">
+                    <Start>Start Now</Start>
+                </Link>
             </AlertRight>
         </AlertDiv>
         <Wrapper>
@@ -263,7 +267,7 @@ export default function Video_page() {
                                     <Icon src={Img2} alt="Image" />
                                 </Marks>
                                 <Complete onClick={()=>setClgModal(true)}>mark as completed</Complete>
-                                <CollegeDetailView clgModal={clgModal}/>
+                                <CollegeDetailView clgModal={clgModal} setClgModal={setClgModal}/>
                             </a>
                         </Button>
                     </BottomDiv>
@@ -338,6 +342,7 @@ const Start = styled.button`
     border-radius: 10px;
     background: #e4794b;
     color: #fff;
+    cursor: pointer;
 `;
 const LeftDiv = styled.div`
     width: 65%;
@@ -379,7 +384,11 @@ const H5 = styled.h5`
     font-weight: 500;
 `;
 const Button = styled.div`
-    
+    width: 185px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 const Marks = styled.div`
     width: 16px;
@@ -388,7 +397,7 @@ const Icon = styled.img`
     width: 100%;
     display: block;
 `;
-const Complete = styled.button`
+const Complete = styled.div`
     font-weight: 400;
     margin: 0 0 0 10px;
     text-transform: capitalize;

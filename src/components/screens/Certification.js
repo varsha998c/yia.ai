@@ -7,7 +7,7 @@ import Img3 from "../../assets/images/arrow.svg";
 
 export default function Certification() {
   return (
-    <Section>
+    <Section className="container">
         <Wrapper>
             <CertificationDiv>
                 <Img src={Img1} alt="Image"/>
@@ -40,13 +40,14 @@ const CertificationDiv = styled.div`
     width: 50%;
 `;
 const Img = styled.img`
-    width: 10%;
+    width: 6%;
 
 `;
 const Heading = styled.h2`
     font-size: 35px;
     color: #fff;
     margin: 0;
+    margin-top: 40px;
 `;
 const Description = styled.p`
     color: #fff;
@@ -65,9 +66,10 @@ const Certificate = styled.img`
 const Arrow = styled.img`
     display: block;
     position: absolute;
-    bottom: -115px;
+    bottom: -114px;
     right: 41%;
-}
+    width: 205px;
+
 `;
 
 

@@ -21,7 +21,7 @@ import pro from '../../assets/images/17.png';
 
 export default function LandingPage() {
   return (
-    <LandingSection>
+    <LandingSection className="container">
         <Wrapper>
             <ImgContainer>
                 <Img src={Img1} alt="Image" />

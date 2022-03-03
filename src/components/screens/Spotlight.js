@@ -11,7 +11,7 @@ import Img6 from "../../assets/images/elipse.svg";
 
 export default function Spotlight() {
   return (
-    <SpotlightSection>
+    <SpotlightSection className="container">
         <Wrapper>
             <Container>
             <DivLeft>
@@ -57,7 +57,8 @@ export default function Spotlight() {
 
 
 const SpotlightSection = styled.section`
-    padding-top: 10%;
+    padding-top: 130px;
+    max-width: 1650px;
     padding-bottom: 20px;
     position: relative;
     &:after {
@@ -132,8 +133,8 @@ const DivButtons = styled.div`
     margin-top: 30px;
 `;
 const A = styled.a`
-    width: 198px;
-    height: 62px;
+    width: 242px;
+    height: 70px;
     cursor: pointer;
     margin-right: 30px;
     color: #fff;
@@ -153,18 +154,21 @@ const A = styled.a`
     }
 `;
 const DivButton = styled.div`
-    width: 198px;
-    height: 61px;
+    width: 242px;
+    height: 70px;
     border-radius: 10px;
     background: #fff;
     background-image: linear-gradient(to right, rgb(99, 187, 76) 30%, rgb(24, 152, 175) 100%);
     padding: 2px;
+    &:hover {
+        background-image: linear-gradient(to left, rgb(99, 187, 76) 30%, rgb(24, 152, 175) 100%);
+    }
 `;
 const EnquiryButton = styled.div`
     background: #ffff;
     border-radius: 10px;
-    height: 60px;
-    width: 197px;
+    height: 69px;
+    width: 241px;
 `;
 const H6 = styled.h6`
     margin: 0;

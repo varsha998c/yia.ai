@@ -6,7 +6,10 @@ import Img3 from '../../../assets/images/college.svg';
 
 
 function CollegeDetailView({clgModal, setClgModal}) {
-    console.log(Modal, "isModal");
+    // console.log(Modal, "isModal");
+    const handleChange = () => {
+        setClgModal(false);
+    }
   return (
     <CollegeDetailSection clgModal={clgModal}>
         <Wrapper>
@@ -17,7 +20,7 @@ function CollegeDetailView({clgModal, setClgModal}) {
                 <RightDiv>
                     <Title>Hurray!</Title>
                     <Description>You have successfully completed the Tefun course...We will notify your examination date soon.</Description>
-                    <Board onClick={()=>setClgModal(false)}>Go to Dashboard</Board>
+                    <Board onClick={()=> handleChange()}>Go to Dashboard</Board>
                 </RightDiv>
             </Container>
             <Line src={Img2} alt="Image" />
@@ -30,7 +33,7 @@ export default CollegeDetailView;
 
 
 const CollegeDetailSection = styled.section`
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     width: 100%;
@@ -73,12 +76,14 @@ const Title = styled.h4`
     color: #20aa77;
     font-size: 30px;
     margin: 25px 0 0 0;
+    text-transform: none;
 `;
 const Description = styled.p`
     color: #577d7e;
     font-size: 14px;
     margin-top: 22px;
     font-weight: 500;
+    text-transform: none;
 `;
 const Board = styled.div`
     width: 72%;
@@ -88,6 +93,7 @@ const Board = styled.div`
     border-radius: 5px;
     border: none;
     color: #fff;
+    text-transform:capitalize;
     display: flex;
     align-items: center;
     justify-content: center;

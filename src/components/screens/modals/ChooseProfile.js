@@ -77,7 +77,7 @@ function ChooseProfile() {
                             </LiRight>
                         </Li>
                         <Buttons>
-                            <NotMe>Not me!</NotMe>
+                            <NotMe><a href="/" className='profile'>Not me!</a></NotMe>
                             <Link to="/newstudentdata">
                                 <Enroll>Enroll</Enroll>
                             </Link>
@@ -216,6 +216,11 @@ const NotMe = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    &:hover {
+        color: #000;
+        font-weight: 600;
+    }
 `;
 const Enroll = styled.div`
     width: 116px;
@@ -228,4 +233,11 @@ const Enroll = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &:hover {
+        background-image: linear-gradient(
+        to left,
+        #63bb4c 0%,
+        #40ab79 51%,
+        #1e9ba6 100%
+    );
 `;

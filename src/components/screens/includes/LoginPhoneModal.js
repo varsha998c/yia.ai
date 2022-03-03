@@ -8,12 +8,14 @@ import Img7 from "../../../assets/images/cancel.png";
 import { Link } from "react-router-dom";
 
 export default function LoginPhoneModal({ isModal, setModal, handleModal }) {
+    console.log(isModal,"+++++++++++++++++++++++")
     return (
         <>
-            {/* <BackContainer style={{ transform: isModal ? "scale(1,1)" : "scale(0,0)" }}> */}
-            <BackContainer style={{ transform: isModal && "scale(1,1)" }}>
-                <Overlay></Overlay>
-                <LoginSection>
+         {
+            isModal &&
+            <BackContainer isModal= {isModal} className="back" >
+                <Overlay className="overlay"></Overlay>
+                <LoginSection isModal ={isModal} className="login">
                     <Login>
                         <ContentDiv>
                             <Title>Login to your account</Title>
@@ -64,11 +66,12 @@ export default function LoginPhoneModal({ isModal, setModal, handleModal }) {
                             </a>
                         </FooterDiv>
                     </Login>
-                    <CancelDiv onClick={handleModal}>
+                    <CancelDiv onClick={()=>handleModal()}>
                         <Cancel src={Img7} alt="Image" />
                     </CancelDiv>
                 </LoginSection>
             </BackContainer>
+}
             {/* <Congradulation modalGift={modalGift} setModalGift={setModalGift} /> */}
         </>
     );
@@ -79,12 +82,14 @@ const BackContainer = styled.div`
     transition: 0.3s;
     width: 100%;
     height: 100vh;
-    transform: scale(0, 0);
-    z-index: 10;
-    left: 0;
+    /* transform: scale(0, 0); */
+    z-index: 999;
+    right: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
+    overflow: hidden;
+
 `;
 const Overlay = styled.div`
     position: absolute;
@@ -93,17 +98,24 @@ const Overlay = styled.div`
     width: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    filter: blur(1px);
+    filter: blur(3px);
+    backdrop-filter: blur(2px);
 `;
 const LoginSection = styled.section`
     padding: 5% 0;
     width: 500px;
     background-color: #fff;
     position: absolute;
-    right: 0;
+    right: ${(props)=>(props.isModal ? "0" : "-500px")};
     top: 0;
-    z-index: 200;
+    z-index: 700;
     height: 100vh;
+    animation-delay: .3s;
+    animation: 0.4s ease 0s 1 normal none running slide-box;
+    @keyframes slide-box {
+        from {right:-200px;}
+        to {right:2px;}
+    }
 `;
 const Login = styled.div`
     width: 80%;

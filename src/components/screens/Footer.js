@@ -15,7 +15,7 @@ import Img11 from "../../assets/images/youtube.svg";
 
 export default function Footer() {
   return (
-    <FooterSection>
+    <FooterSection className="container">
         <Wrapper>
             <ImgContainer>
                 <InnerDiv>
@@ -24,23 +24,23 @@ export default function Footer() {
             </ImgContainer>
             <MiddleDiv>
                 <IconDiv>
-                    <Icon href="#">
+                    <Icon href="/">
                         <Img className='color' src={Img2} alt="Image" />
                         <Img src={Img3} alt="Image" />
                     </Icon>
-                    <Icon href="#">
+                    <Icon href="/">
                         <Img className='color' src={Img4} alt="Image" />
                         <Img src={Img5} alt="Image" />
                     </Icon>
-                    <Icon href="#">
+                    <Icon href="/">
                         <Img className='color' src={Img6} alt="Image" />
                         <Img src={Img7} alt="Image" />
                     </Icon>
-                    <Icon href="#">
+                    <Icon href="/">
                         <Img className='color' src={Img8} alt="Image" />
                         <Img src={Img9} alt="Image" />
                     </Icon>
-                    <Icon href="#">
+                    <Icon href="/">
                         <Img className='color' src={Img10} alt="Image" />
                         <Img src={Img11} alt="Image" />
                     </Icon>
@@ -147,10 +147,12 @@ const Phone = styled.h6`
     margin: 0;
     font-weight: 600;
     font-size: 14px;
+    cursor: pointer;
 `;
 const Email = styled.h5`
     margin: 0;
     font-weight: 600;
     font-size: 14px;
+    cursor: pointer;
 `;
 

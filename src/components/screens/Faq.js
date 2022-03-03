@@ -70,7 +70,7 @@ export default function Faq() {
 
 
   return (
-    <Section>
+    <Section className='container'>
         <Wrapper>
             <Heading>Frequently <br></br><Span>Asked Questions</Span></Heading>
             <Ul>
@@ -123,8 +123,13 @@ const Description = styled.p`
     color: #525451;
     font-size: 16px;
     font-weight: 600;
+    
 `;
-const Img = styled.img``;
+const Img = styled.img`
+    cursor: pointer;
+    display: block;
+    width: 20px;
+`;
 const Answer = styled.p`
     display: none;
     &.active {

@@ -5,7 +5,7 @@ import Img1 from "../../assets/images/join-img.png";
 
 export default function Students() {
   return (
-    <StudenntsSection>
+    <StudenntsSection className="container">
         <Wrapper>
             <Container>
                 <LeftDiv>

@@ -14,7 +14,7 @@ import Img9 from "../../assets/images/card.svg";
 
 export default function Gallery() {
   return (
-    <GallerySection>
+    <GallerySection className="container">
         <Container>
             <Wrapper>
                 <Title>ഞങ്ങളുടെ <Span>പാഠ്യപദ്ധതികൾ</Span></Title>

@@ -10,13 +10,15 @@ import LandingPage from "../screens/LandingPage";
 import Video_page from "../screens/Video_page";
 import ProfileModal from '../screens/modals/ProfileModal';
 import ChooseProfile from "../screens/modals/ChooseProfile";
+import ExaminationModal from "../screens/modals/ExaminationModal";
+import ExamComplete from "../screens/modals/ExamComplete";
+import ExamStart from "../screens/modals/ExamStart";
 
  
 function AppRouter() {
    console.log("app router");
    return (
        <Container>
-           {/* <HeaderModal/> */}
            <Routes>
                <Route path="/" element={<Explore />} />
                <Route path="/entername" element={<EnterName/>}/>
@@ -27,6 +29,9 @@ function AppRouter() {
                <Route path="/landing" element={<LandingPage/>}/>
                <Route path="/videopage" element={<Video_page/>}/>
                <Route path="/profile" element={<ProfileModal/>}/>
+               <Route path="/exam" element={<ExaminationModal/>}/>  
+               <Route path="/start" element={<ExamStart/>}/>
+               <Route path="/complete" element={<ExamComplete/>}/>
 
            </Routes>
        </Container>

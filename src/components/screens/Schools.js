@@ -11,7 +11,7 @@ import { StyleSheetConsumer } from 'styled-components';
 
 export default function Schools() {
   return (
-    <Section>
+    <Section className="container">
         <Wrapper>
             <Heading>How</Heading>
             <Span>Schools Can Join</Span>
@@ -62,7 +62,7 @@ export default function Schools() {
                     <Description><Bold>Tefun</Bold>  പ്രോഗ്രാമിന്റെ ഭാഗമാകാൻ ആഗ്രഹിക്കുന്ന സ്കൂളുകൾക്ക് </Description>
                 </CardDiv>
             </Details>
-            <RegisterButton href="#">Register Now</RegisterButton>
+            <RegisterButton>Register Now</RegisterButton>
         </Wrapper>
     </Section>
   )
@@ -147,16 +147,24 @@ const Description = styled.div`
 const Bold = styled.b`
     color: #646462;
 `;
-const RegisterButton = styled.a`
+const RegisterButton = styled.button`
     width: 16%;
     margin: 0 auto;
+    border: none;
     height: 59px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 17px;
-    background: linear-gradient(45deg, #59b757, #1c9aa8);
+    border-radius: 10px;
+    background-image: linear-gradient(to right,
+        #63bb4c 0%,
+        #40ab79 51%,
+        #1e9ba6 100%
+        );
     color: #fff;
     font-size: 18px;
+    &:hover {
+        background-image: linear-gradient(to left, #63bb4c 20%, #1898af 100%);
+    }
 `;

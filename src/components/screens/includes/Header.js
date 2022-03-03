@@ -9,16 +9,19 @@ export default function Header() {
     const [isModal, setModal] = useState(false);
 
     const handleModal = () => {
-        setModal((prev) => !prev);
+        setModal(!isModal);
     };
     return (
         <>
+            <LoginPhoneModal
+            isModal={isModal}
+            setModal={setModal}
+            handleModal={handleModal}
+        />
+        
+               
             <HeaderSection>
-                <LoginPhoneModal
-                    isModal={isModal}
-                    setModal={setModal}
-                    handleModal={handleModal}
-                />
+
                 <Wrapper>
                     <DivLeft>
                         <H1>
@@ -49,6 +52,12 @@ const HeaderSection = styled.div`
     height: 110px;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.1);
+    @media (max-width: 1280px) {
+        height: 85px;
+    }
+    @media (max-width: 980px) {
+        height: 80px;
+    }
 `;
 const Wrapper = styled.div`
     width: 85%;
@@ -61,6 +70,24 @@ const DivLeft = styled.div``;
 const H1 = styled.h1`
     width: 125px;
     margin: 20px auto;
+    @media (max-width:1280px) {
+        width: 110px;
+    }
+    @media (max-width:980px) {
+        width: 100px;
+    }
+    @media (max-width:768px) {
+        width: 90px;
+    }
+    @media (max-width:640px) {
+        width: 80px;
+    }
+    @media (max-width:480px) {
+        width: 70px;
+    }
+    @media (max-width:320px) {
+        width: 60px;
+    }
 `;
 const Img = styled.img`
     display: block;
@@ -73,6 +100,21 @@ const RightButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:980px) {
+        justify-content: flex-end;
+    }
+    @media (max-width:768px) {
+        width: 134px;
+    }
+    @media (max-width:640px) {
+        
+    }
+    @media (max-width:480px) {
+        
+    }
+    @media (max-width:320px) {
+        
+    }
 `;
 const Button = styled.button`
     padding: 15px 34px;
@@ -91,7 +133,22 @@ const Button = styled.button`
     &:hover {
         background-image: linear-gradient(to left, #63bb4c 20%, #1898af 100%);
     }
+    @media (max-width:1280px) {
+        padding: 15px 27px;
+    }
+    @media (max-width:768px) {
+        padding: 15px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    @media (max-width:480px) {
+        padding: 9px;
+        font-weight: 200;
+    }
 `;
 const MenuImage = styled.div`
     width: 40px;
+    @media (max-width:980px) {
+        display: none;
+    }
 `;

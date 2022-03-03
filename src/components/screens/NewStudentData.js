@@ -14,7 +14,7 @@ export default function NewStudentData() {
     <HeaderModal setIsModal={setIsModal}/> 
     <ProfileModal isModal={isModal} setIsModal={setIsModal}/>
     <Section> 
-    <DataSection>
+    <DataSection className="container">
         <InnerDiv>
             <Img src={Img1} alt="Image" />
         </InnerDiv>
@@ -51,7 +51,7 @@ export default function NewStudentData() {
                 </p>
             </Form>
             <Bottom>
-                <a href="#" className='back'>back</a>
+                <a href="/" className='back'>back</a>
                     <Button onClick={()=>setCngrtsModal((prev)=>!prev)}>Submit</Button>
                 <Congradulation cngrtsModal={cngrtsModal}/>
             </Bottom>
