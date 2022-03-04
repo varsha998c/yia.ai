@@ -24,7 +24,7 @@ export default function NewStudentData() {
             <Form>
                 <p>
                     <Label type="text" value="Campus Name/Code">Campus Name/Code</Label>
-                    <Input type="text" />
+                    <Input type="text" placeholder='JNE001' />
                 </p>
                 <p>
                     <Label type="text" value="select class">Select class</Label>

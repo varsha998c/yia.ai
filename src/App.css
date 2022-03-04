@@ -56,6 +56,10 @@ a.button {
 a.google {
 
 }
+img.right {
+  width: 20px;
+  cursor: pointer;
+}
 li.watch {
   width: 24%;
 }
@@ -184,7 +188,7 @@ a.footer {
 }
 a.terms {
   text-transform: capitalize;
-  color: #8e8e8e;
+  color: #000;
 }
 a.term {
   color: #000;

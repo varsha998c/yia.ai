@@ -396,6 +396,7 @@ const Marks = styled.div`
 const Icon = styled.img`
     width: 100%;
     display: block;
+    cursor: pointer;
 `;
 const Complete = styled.div`
     font-weight: 400;
@@ -413,6 +414,7 @@ const Ul = styled.ul`
     margin-left: 20px;
 `;
 const Li = styled.li`
+    cursor: pointer;
     list-style: none;
     &.active div{
         display: flex;

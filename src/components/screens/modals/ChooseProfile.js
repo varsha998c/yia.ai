@@ -10,6 +10,29 @@ import ProfileModal from '../../screens/modals/ProfileModal';
 
 function ChooseProfile() {
     const [isModal,setIsModal]=useState(false);
+    const [std,setStd] = useState([
+        {
+            id:1,
+            content:"",
+            name:"Akshay S(5A)",
+            school:"LVHS Pothencode",
+            image:Img2,
+        },
+        {
+            id:2,
+            content:"",
+            name:"Akshay S(5A)",
+            school:"LVHS Pothencode",
+            image:Img2,
+        },
+        {
+            id:3,
+            content:"",
+            name:"Akshay S(5A)",
+            school:"LVHS Pothencode",
+            image:Img2,
+        },
+    ]);
   return (
     <>
     <HeaderModal setIsModal={setIsModal}/> 
@@ -28,54 +51,22 @@ function ChooseProfile() {
                         <Call>( +91 9876543210 )</Call>
                     </Card>
                     <Ul>
-                        <Li>
-                            <LiLeft>
-                                <Container>
-                                    
-                                </Container>
-                                <NameSet>
-                                    <H4>Akshay S(5A)</H4>
-                                    <H6>LVHS Pothencode</H6>
-                                </NameSet>
-                            </LiLeft>
-                            <LiRight>
-                                <ImgContainer>
-                                    <Img src={Img2} alt="Image" />
-                                </ImgContainer>
-                            </LiRight>
-                        </Li>
-                        <Li>
-                            <LiLeft>
-                                <Container>
-                                    
-                                </Container>
-                                <NameSet>
-                                    <H4>Akshay S(5A)</H4>
-                                    <H6>LVHS Pothencode</H6>
-                                </NameSet>
-                            </LiLeft>
-                            <LiRight>
-                                <ImgContainer>
-                                    <Img src={Img2} alt="Image" />
-                                </ImgContainer>
-                            </LiRight>
-                        </Li>
-                        <Li>
-                            <LiLeft>
-                                <Container>
-                                    
-                                </Container>
-                                <NameSet>
-                                    <H4>Akshay S(5A)</H4>
-                                    <H6>LVHS Pothencode</H6>
-                                </NameSet>
-                            </LiLeft>
-                            <LiRight>
-                                <ImgContainer>
-                                    <Img src={Img2} alt="Image" />
-                                </ImgContainer>
-                            </LiRight>
-                        </Li>
+                        {std.map((item)=>{
+                            return <Li>
+                                <LiLeft>
+                                    <Container>{item.content}</Container>
+                                    <NameSet>
+                                        <H4>{item.name}</H4>
+                                        <H6>{item.school}</H6>
+                                    </NameSet>
+                                </LiLeft>
+                                <LiRight>
+                                    <ImgContainer>
+                                        <Img src={item.image} alt="Image" />
+                                    </ImgContainer>
+                                </LiRight>
+                            </Li>
+                        })}
                         <Buttons>
                             <NotMe><a href="/" className='profile'>Not me!</a></NotMe>
                             <Link to="/newstudentdata">

@@ -9,7 +9,6 @@ import Gallery from './Gallery';
 import Header from './includes/Header';
 import LoginPhoneModal from './includes/LoginPhoneModal';
 import Mobile_app from './Mobile_app';
-import ExaminationModal from './modals/ExaminationModal';
 import Schools from './Schools';
 import Spotlight from './Spotlight';
 import Students from './Students';

@@ -11,6 +11,38 @@ import { Link } from "react-router-dom";
 
 function ExaminationModal() {
     const [isModal,setIsModal]=useState(false);
+    const [quest,setQuest] = useState([
+        {
+            id:1,
+            round:"",
+            point: "60 മിനിറ്റ് ആയിരിക്കും എക്സാം ഉണ്ടാവുക ",
+        },
+        {
+            id:2,
+            round:"",
+            point: "എല്ലാ ചോദ്യത്തിനും ഉത്തരം എഴുതണം",
+        },
+        {
+            id:3,
+            round:"",
+            point: "25 ചോദ്യങ്ങൾ ആവും ഉണ്ടാവുക",
+        },
+        {
+            id:4,
+            round:"",
+            point: "ഓരോ ശ രിയുത്തരത്തിനും ഓരോ മാർക്ക് വീതം ലഭിക്കും ",
+        },
+        {
+            id:5,
+            round:"",
+            point: "25 ചോദ്യങ്ങൾ ആവും ഉണ്ടാവുക   ",
+        },
+        {
+            id:6,
+            round:"",
+            point: "60 മിനിറ്റ് ആയിരിക്കും എക്സാം ഉണ്ടാവുക ",
+        },
+    ]);
 
   return (
       <>
@@ -33,7 +65,7 @@ function ExaminationModal() {
                 <Right>
                     <Div>
                         <Span>Time remaining</Span>
-                        <Time>03:00:00</Time>
+                        <Time>03 : 00 : 00</Time>
                     </Div>
                 </Right>
             </TimeDiv>
@@ -41,39 +73,17 @@ function ExaminationModal() {
                 <Contents>
                     <Instructions>Examination <Small>instructions</Small></Instructions>
                     <Ul>
-                        <Li>
-                            <Round>
-                                <InnerRound></InnerRound>
-                            </Round>
-                            <Points>60 മിനിറ്റ് ആയിരിക്കും എക്സാം ഉണ്ടാവുക </Points>
-                        </Li>
-                        <Li>
-                            <Round>
-                                <InnerRound></InnerRound>
-                            </Round>
-                            <Points>എല്ലാ ചോദ്യത്തിനും ഉത്തരം എഴുതണം </Points>
-                        </Li>
-                        <Li>
-                            <Round>
-                                <InnerRound></InnerRound>
-                            </Round>
-                            <Points>25 ചോദ്യങ്ങൾ ആവും ഉണ്ടാവുക </Points>
-                        </Li>
-                        <Li>
-                            <Round>
-                                <InnerRound></InnerRound>
-                            </Round>
-                            <Points>ഓരോ ശ രിയുത്തരത്തിനും ഓരോ മാർക്ക് വീതം ലഭിക്കും   </Points>
-                        </Li>
-                        <Li>
-                            <Round>
-                                <InnerRound></InnerRound>
-                            </Round>
-                            <Points>25 ചോദ്യങ്ങൾ ആവും ഉണ്ടാവുക </Points>
-                        </Li>
+                        {quest.map((item)=>(
+                            <Li>
+                                <Round>
+                                    <InnerRound>{item.round}</InnerRound>
+                                </Round>
+                                <Points>{item.point}</Points>
+                            </Li>
+                        ))}
                     </Ul>
                     <Link to="/start">
-                        <Button>start exam now <img src={Img2} alt="Image" /></Button>
+                        <Button>start exam now <img className='right' src={Img2} alt="Image" /></Button>
                     </Link>
                 </Contents>
             </InstDiv>
@@ -147,7 +157,10 @@ const Span = styled.span`
     text-transform: capitalize;
     font-size: 14px;
 `;
-const Time = styled.small``;
+const Time = styled.small`
+    font-weight: 800;
+    font-size: 20px;
+`;
 const InstDiv =styled.div`
     margin-top: 5px;
     border-radius: 5px;

@@ -25,7 +25,9 @@ export default function Spotlight() {
                     <Image src={Img2} alt="Image" />
                 </ImgDiv>
                 <DivButtons>
-                    <A href="#">Join for free</A>
+                    <JoinButton>
+                        <A href="#">Join for free</A>
+                    </JoinButton>
                     <DivButton>
                         <EnquiryButton>
                             <a className='button' href="#">
@@ -58,7 +60,7 @@ export default function Spotlight() {
 
 const SpotlightSection = styled.section`
     padding-top: 130px;
-    max-width: 1650px;
+    max-width: 1380px;
     padding-bottom: 20px;
     position: relative;
     &:after {
@@ -86,12 +88,30 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 60px 50px;
+    @media (max-width:1080px) {
+        flex-flow: column wrap;
+    }
+    @media (max-width:980px) {
+        padding: 35px 50px;
+    }
 `;
 const DivLeft = styled.div`
     width: 45%;
+    @media (max-width:1080px) {
+        width: 100%;
+    }
+    @media (max-width:1080px) {
+        margin-bottom: 50px;
+    }
 `;
 const ImgContainer = styled.div`
     width: 40%;
+    @media (max-width:1080px) {
+        width: 30%;
+    }
+    @media (max-width:980px){
+        width: 36%;
+    }
 `;
 const Img = styled.img`
     width: 100%;
@@ -102,6 +122,7 @@ const Title = styled.h4`
     color: #000;
     font-weight: 600;
     margin: 0;
+    
 `;
 const SubTitle = styled.h5`
     font-size: 24px;
@@ -109,6 +130,13 @@ const SubTitle = styled.h5`
     font-weight: 900;
     line-height: 1.4;
     margin-top: 15px;
+    @media (max-width:1080px) {
+        font-size: 22px;
+        margin-top: 22px;
+    }
+    @media (max-width:980px) {
+        font-size: 23px;
+    }
 `;
 const Small = styled.small`
     color: #0fa76f;
@@ -118,9 +146,22 @@ const Paragraph = styled.p`
     line-height: 1.7;
     width: 95%;
     margin: 0 0 20px 0;
+    @media (max-width:1080px) {
+        width: 100%;
+        margin: 0 0 33px 0;
+    }
+    @media (max-width:980px) {
+        width: 90%;
+        font-size: 18px;
+        line-height: 1.4;
+    }
 `;
 const ImgDiv = styled.div`
     width: 80%;
+    @media (max-width:1080px) {
+        width: 80%;
+        margin: 0px auto;
+    }
 
 `;
 const Image = styled.img`
@@ -128,17 +169,28 @@ const Image = styled.img`
     display: block;
 `;
 const DivButtons = styled.div`
+    width: 90%;
     display: flex;
     align-items: center;
     margin-top: 30px;
+    /* justify-content: space-between; */
+    @media (max-width:1280px) {
+        width: 94%;
+    }
+    @media (max-width:1080px) {
+        flex-flow: column wrap;
+        width: 100%;
+    }
 `;
 const A = styled.a`
+   color: #fff;
+   text-transform: capitalize;
+`;
+const JoinButton = styled.div`
     width: 242px;
     height: 70px;
     cursor: pointer;
     margin-right: 30px;
-    color: #fff;
-    text-transform: capitalize;
     font-size: 18px;
     display: flex;
     text-decoration: none;
@@ -152,16 +204,28 @@ const A = styled.a`
     &:hover {
         background-image: linear-gradient(to left, #63bb4c 20%, #1898af 100%);
     }
+    @media (max-width:1280px) {
+        margin-right: 23px;
+    }
+    @media (max-width:1080px) {
+        margin-right: 0;
+    }
 `;
 const DivButton = styled.div`
     width: 242px;
     height: 70px;
     border-radius: 10px;
-    background: #fff;
     background-image: linear-gradient(to right, rgb(99, 187, 76) 30%, rgb(24, 152, 175) 100%);
     padding: 2px;
     &:hover {
         background-image: linear-gradient(to left, rgb(99, 187, 76) 30%, rgb(24, 152, 175) 100%);
+    }
+    @media (max-width:1280px) {
+        width: 183px;
+    }
+    @media (max-width:1080px) {
+        margin-top: 20px;
+        width: 235px;
     }
 `;
 const EnquiryButton = styled.div`
@@ -169,6 +233,13 @@ const EnquiryButton = styled.div`
     border-radius: 10px;
     height: 69px;
     width: 241px;
+    @media (max-width:1280px) {
+        width: 182px;
+
+    }
+    @media (max-width:1080px) {
+        width: 235px;
+    }
 `;
 const H6 = styled.h6`
     margin: 0;
@@ -187,10 +258,19 @@ const DivRight = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    
+    @media (max-width:1080px) {
+        width: 70%;
+        margin: 0px auto;
+    }
+    @media (max-width:980px) {
+        width: 66%;
+    }
 `;
 const InnerDiv = styled.div`
     position : relative;
+    @media (max-width:1080px) {
+        margin-bottom: 30px;
+    }
 `;
 const ImageDiv = styled.div`
     overflow: hidden;
@@ -204,7 +284,14 @@ const ArrowImage = styled.img`
     left: -16%;
     bottom: -12%;
 `;
-const PlayContainer = styled.div``;
+const PlayContainer = styled.div`
+    @media (max-width:1080px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+`;
 const PlayImage = styled.img`
     display: block;
     width: 100%;

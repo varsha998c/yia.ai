@@ -49,7 +49,7 @@ export default function LandingPage() {
                     <a href="" className='learning'>start learning
                     </a>
                     </Link>
-                <RightArrow src={Img4} alt="Image" />
+                <RightArrow className='right' src={Img4} alt="Image" />
             </Button>  
         </Wrapper>
     </LandingSection>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Img1 from "../../assets/images/ai.jpg";
 import Img2 from "../../assets/images/ar&vr.jpg";
@@ -13,6 +13,56 @@ import Img9 from "../../assets/images/card.svg";
 
 
 export default function Gallery() {
+    const[tech,setTech] =useState([
+        {
+            id:1,
+            image:Img1,
+            name:"Artificial Intelligence",
+
+        },
+        {
+            id:2,
+            image:Img2,
+            name:"AR-VR",
+
+        },
+        {
+            id:3,
+            image:Img3,
+            name:"IoT",
+
+        },
+        {
+            id:4,
+            image:Img4,
+            name:"Robotics",
+
+        },
+        {
+            id:5,
+            image:Img5,
+            name:"3D-Printing",
+
+        },
+        {
+            id:6,
+            image:Img6,
+            name:"Driverless Car",
+
+        },
+        {
+            id:7,
+            image:Img7,
+            name:"Metaverse",
+
+        },
+        {
+            id:8,
+            image:Img8,
+            name:"Web 3.0",
+        },
+
+    ])
   return (
     <GallerySection className="container">
         <Container>
@@ -20,57 +70,17 @@ export default function Gallery() {
                 <Title>ഞങ്ങളുടെ <Span>പാഠ്യപദ്ധതികൾ</Span></Title>
                 <Description>ടെക്ക് പഠനം വേറിട്ടതും  , ക്രിയാത്മകവുമാക്കാൻ  മുന്നോട്ടുവെക്കുന്ന സിലബസുകൾ പരിചയപ്പെടാം </Description>
                 <CardDiv>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img1} alt="Image"/>
-                        </ImageContainer>
-                        <Name>Artificial Intelligence</Name>
-                    </InnerCards>
-                    <InnerCards className="watch">
-                        <ImageContainer>
-                            <Img src={Img2} alt="Image"/>
-                        </ImageContainer>
-                        <Name>AR-VR</Name>
-                    </InnerCards>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img3} alt="Image"/>
-                        </ImageContainer>
-                        <Name>IoT</Name>
-                    </InnerCards>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img4} alt="Image"/>
-                        </ImageContainer>
-                        <Name>Robotics</Name>
-                    </InnerCards>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img5} alt="Image"/>
-                        </ImageContainer>
-                        <Name>3D-Printing</Name>
-                    </InnerCards>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img6} alt="Image"/>
-                        </ImageContainer>
-                        <Name>Driverless Car</Name>
-                    </InnerCards>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img7} alt="Image"/>
-                        </ImageContainer>
-                        <Name>Metaverse</Name>
-                    </InnerCards>
-                    <InnerCards>
-                        <ImageContainer>
-                            <Img src={Img8} alt="Image"/>
-                        </ImageContainer>
-                        <Name>Web 3.0</Name>
-                        <CardImage>
-                            <Card src={Img9} alt="Image" />
-                        </CardImage>
-                    </InnerCards>
+                    {tech.map((item)=>(
+                        <InnerCards>
+                            <ImageContainer>
+                                <Img src={item.image} alt="Image"/>
+                            </ImageContainer>
+                            <Name>{item.name}</Name>
+                        </InnerCards>
+                    ))}
+                    <CardImage>
+                        <Card src={Img9} alt="Image" />
+                    </CardImage>
                 </CardDiv>
             </Wrapper>
         </Container>
@@ -80,9 +90,10 @@ export default function Gallery() {
 const GallerySection = styled.section`
     padding: 40px 0;
     text-align : center;
+    position: relative;
 `;
 const Container = styled.div`
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 `;
 const Wrapper = styled.div`
@@ -109,6 +120,9 @@ const CardDiv = styled.ul`
     margin-top: 80px;
     padding: 0;
     text-align:center;
+    @media(max-width:1280px) {
+        justify-content: center;
+    }
 
 `;
 const InnerCards = styled.li`
@@ -118,14 +132,24 @@ const InnerCards = styled.li`
     background-color: #e3f4e6;
     border-radius : 10px;
     padding: 5px;
+    margin-right: 20px;
     &:nth-child(2) {
         background-color: #fff8e4;
+        
     }
     &:nth-child(3) {
         background-color: #e2f9dd;
+        @media (max-width:1280px) {
+            margin-right: 0;
+        }
+        
     }
     &:nth-child(4) {
         background: #efeafa;
+        margin-right: 0;
+        @media (max-width:1280px) {
+            margin-right: 20px;
+        }
     }
     &:nth-child(5) {
         background-color: #fff8e4;
@@ -135,12 +159,17 @@ const InnerCards = styled.li`
     }
     &:nth-child(7) {
         background-color: #e3f4e6;
+        @media (max-width:1280px) {
+            margin-right: 20px;
+        }
     }
     &:nth-child(8) {
         background: #f9eefb;
-        position: relative;
+        margin-right: 0;
     }
-
+    @media (max-width:1280px) {
+        width: calc(30% - 20px);
+    }
 `;
 const ImageContainer = styled.div`
     width: 92%;
@@ -164,9 +193,19 @@ const Span = styled.span`
 `;
 const CardImage = styled.div`
     position: absolute;
-    right: -106px;
-    bottom: -100px;
-    width: 83%;
+    right: -62px;
+    bottom: -13px;
+    width: 19%;
+    @media (max-width: 1280px) {
+        right: 145px;
+        bottom: 12px;
+        width: 21%;
+    }
+    @media (max-width:1080px) {
+        right: 119px;
+        bottom: 12px;
+        width: 24%;
+    }
 `;
 const Card = styled.img`
     width: 100%;

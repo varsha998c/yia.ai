@@ -17,11 +17,8 @@ export default function Header() {
             isModal={isModal}
             setModal={setModal}
             handleModal={handleModal}
-        />
-        
-               
+        />       
             <HeaderSection>
-
                 <Wrapper>
                     <DivLeft>
                         <H1>
@@ -99,7 +96,7 @@ const RightButton = styled.div`
     width: 212px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     @media (max-width:980px) {
         justify-content: flex-end;
     }
@@ -148,6 +145,7 @@ const Button = styled.button`
 `;
 const MenuImage = styled.div`
     width: 40px;
+    display: none;
     @media (max-width:980px) {
         display: none;
     }

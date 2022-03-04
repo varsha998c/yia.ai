@@ -8,7 +8,28 @@ import HeaderModal from '../../screens/modals/HeaderModal';
 
 function ExamStart() {
     const [isModal,setIsModal]=useState(false);
-
+    const [exam,setExam] = useState([
+        {
+            id:1,
+            content:"A",
+            question:"Another answer can be placed here",
+        },
+        {
+            id:2,
+            content:"B",
+            question:"Another answer can be placed here",
+        },
+        {
+            id:3,
+            content:"C",
+            question:"Another answer can be placed here",
+        },
+        {
+            id:4,
+            content:"D",
+            question:"Another answer can be placed here",
+        },
+    ])
   return (
     <>
     <HeaderModal setIsModal={setIsModal}/> 
@@ -38,22 +59,12 @@ function ExamStart() {
                 <Contents>
                     <Instructions>The school survay questions for teachers in an in-depth survey that a school deploys to its teaching stuff to gather data about they perception  about the school?</Instructions>
                     <Ul>
-                        <Li>
-                            <Round>A</Round>
-                            <Points>Another answer can be placed here</Points>
-                        </Li>
-                        <Li>
-                            <Round>B</Round>
-                            <Points>Another answer can be placed here</Points>
-                        </Li>
-                        <Li>
-                            <Round>C</Round>
-                            <Points>Another answer can be placed here</Points>
-                        </Li>
-                        <Li>
-                            <Round>D</Round>
-                            <Points>Another answer can be placed here</Points>
-                        </Li>
+                        {exam.map((item)=>(
+                            <Li>
+                                <Round>{item.content}</Round>
+                                <Points>{item.question}</Points>
+                            </Li>
+                        ))}    
                     </Ul>
                     <Link to="/complete">
                         <Button>next</Button>
@@ -129,7 +140,10 @@ const Span = styled.span`
     text-transform: capitalize;
     font-size: 14px;
 `;
-const Time = styled.small``;
+const Time = styled.small`
+    font-weight: 800;
+    font-size: 20px;
+`;
 const InstDiv = styled.div`
     margin-top: 5px;
     border-radius: 5px;

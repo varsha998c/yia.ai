@@ -25,7 +25,6 @@ function HeaderModal({setIsModal}) {
                 </AlertIcon>
                 <Name>
                     <Div>V</Div>
-                    {/* <MyName>Varsha <Link to="/profile"><img className='select' src={Img3} alt="Image" /></Link></MyName> */}
                     <MyName onClick={()=> handleClick()}>Varsha 
                         <img className='select' src={Img3} alt="Image" />
                     </MyName>

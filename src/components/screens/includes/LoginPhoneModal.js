@@ -8,7 +8,6 @@ import Img7 from "../../../assets/images/cancel.png";
 import { Link } from "react-router-dom";
 
 export default function LoginPhoneModal({ isModal, setModal, handleModal }) {
-    console.log(isModal,"+++++++++++++++++++++++")
     return (
         <>
          {

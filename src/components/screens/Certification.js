@@ -67,7 +67,7 @@ const Arrow = styled.img`
     display: block;
     position: absolute;
     bottom: -114px;
-    right: 41%;
+    right: 44%;
     width: 205px;
 
 `;

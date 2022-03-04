@@ -13,42 +13,42 @@ function ProfileModal({setIsModal, isModal}) {
         <Overlay></Overlay>
         <Wrapper>
             <Profile>
-              <IconDiv onClick={() => setIsModal(false)}>
-                <Img className='leftarrow' src={Img1} alt="Image" />
-              </IconDiv>
-              <H3>Profile</H3>
+                <IconDiv onClick={() => setIsModal(false)}>
+                    <Img className='leftarrow' src={Img1} alt="Image" />
+                </IconDiv>
+                <H3>Profile</H3>
             </Profile>
             <NameIcon>V</NameIcon>
             <Name>Varsha</Name>
             <Number>( +91 8589998071 )</Number>
             <Ul>
-              <Li>
+                <Li>
+                    <ImgContainer>
+                    <Img src={Img2} alt="Image" />
+                    </ImgContainer>
+                    <RightDiv>
+                        <Campus>Campus</Campus>
+                        <CampusName>Jamia Nadviyya Arts & science College Edavanna</CampusName>
+                    </RightDiv>
+                </Li>
+                <Li>
                 <ImgContainer>
-                  <Img src={Img2} alt="Image" />
-                </ImgContainer>
-                <RightDiv>
-                    <Campus>Campus</Campus>
-                    <CampusName>Jamia Nadviyya Arts & science College Edavanna</CampusName>
-                </RightDiv>
-              </Li>
-              <Li>
-              <ImgContainer>
-                  <Img  src={Img3} alt="Image" />
-                </ImgContainer>
-                <RightDiv>
-                    <Campus>Class</Campus>
-                    <CampusName>IV</CampusName>
-                </RightDiv>
-              </Li>
-              <Li>
-              <ImgContainer>
-                  <Img src={Img4} alt="Image" />
-                </ImgContainer>
-                <RightDiv>
-                    <Campus>Division</Campus>
-                    <CampusName>B</CampusName>
-                </RightDiv>
-              </Li>
+                    <Img  src={Img3} alt="Image" />
+                    </ImgContainer>
+                    <RightDiv>
+                        <Campus>Class</Campus>
+                        <CampusName>IV</CampusName>
+                    </RightDiv>
+                </Li>
+                <Li>
+                <ImgContainer>
+                    <Img src={Img4} alt="Image" />
+                    </ImgContainer>
+                    <RightDiv>
+                        <Campus>Division</Campus>
+                        <CampusName>B</CampusName>
+                    </RightDiv>
+                </Li>
             </Ul>
             <LogOut onClick={() => setIsModal(false)}><img className='log' src={Img5} alt="Image" />Logout</LogOut>
         </Wrapper>
@@ -87,6 +87,12 @@ const Wrapper = styled.div`
     background: #fff;
     height: 600px;
     border-radius: 10px;
+    animation-delay: .3s;
+    animation: 0.4s ease 0s 1 normal none running slide-box;
+    @keyframes slide-box {
+        from {right:-200px;}
+        to {right:2px;}
+    }
 `;
 const Profile = styled.div`
     height: 165px;
@@ -109,6 +115,7 @@ const IconDiv = styled.div`
 const Img = styled.img`
     width: 60%;
     display: block;
+    cursor: pointer;
 `;
 const H3 = styled.h3`
     width: 80%;
@@ -130,7 +137,7 @@ const NameIcon = styled.div`
     align-items: center;
     font-weight: 600;
     font-size: 30px;
-    top:170px;
+    top:221px;
     position: absolute;
     left: 120px;
 `;

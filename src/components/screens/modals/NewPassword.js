@@ -142,6 +142,7 @@ const Section =styled.div`
     width: 500px;
     padding: 0 50px;
     background-color: #fff;
+    animation-delay: .3s;
 `;
 const MainContainer = styled.div`
     text-align: left;
@@ -152,6 +153,12 @@ const MainContainer = styled.div`
     top: 0;
     background-color: #fff;
     background: url(${Img6}) no-repeat;
+    animation-delay: .3s;
+    animation: 0.4s ease 0s 1 normal none running slide-box;
+    @keyframes slide-box {
+        from {right:-200px;}
+        to {right:2px;}
+    }
 `;
 const TopContainer = styled.div`
     display: flex;

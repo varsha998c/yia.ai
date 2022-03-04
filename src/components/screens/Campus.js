@@ -21,6 +21,29 @@ export default function Campus() {
         cssEase: "linear",
         nextArrow: false,
         prevArrow: false,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                },
+            },
+        ],
     };
 
     const sec_settings = {
@@ -32,6 +55,29 @@ export default function Campus() {
         speed: 4000,
         autoplaySpeed: 4000,
         cssEase: "linear",
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                },
+            },
+        ],
     };
 
     const [colleges, setColleges] = useState([
@@ -39,43 +85,43 @@ export default function Campus() {
             id: 1,
             name: "Jamia Nadviyya arts & science college",
             image: Img1,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 2,
             name: "Jamia Nadviyya arts & science college",
             image: Img8,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 3,
             name: "Jamia Nadviyya arts & science college",
             image: Img3,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 4,
             name: "Jamia Nadviyya arts & science college",
             image: Img4,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 5,
             name: "Jamia Nadviyya arts & science college",
             image: Img5,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 6,
             name: "Jamia Nadviyya arts & science college",
             image: Img6,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 7,
             name: "Jamia Nadviyya arts & science college",
             image: Img7,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 8,
@@ -87,13 +133,13 @@ export default function Campus() {
             id: 9,
             name: "Jamia Nadviyya arts & science college",
             image: Img1,
-            place: "malappuram",
+            place: "Malappuram",
         },
         {
             id: 10,
             name: "Jamia Nadviyya arts & science college",
             image: Img5,
-            place: "malappuram",
+            place: "Malappuram",
         },
     ]);
 
@@ -120,9 +166,9 @@ export default function Campus() {
                                             <img src={college.image} alt="" />
                                         </ImgContainer>
                                         <CollegeName>{college.name}</CollegeName>
-                                        <Location>
+                                        <Place>
                                             {college.place}
-                                        </Location>
+                                        </Place>
                                     </CampusCard>
                                 ))}
                             </Slider>
@@ -135,9 +181,9 @@ export default function Campus() {
                                             <img src={college.image} alt="" />
                                         </ImgContainer>
                                         <CollegeName>{college.name}</CollegeName>
-                                        <Location>
+                                        <Place>
                                             {college.place}
-                                        </Location>
+                                        </Place>
                                     </CampusCard>
                                 ))}
                             </Slider>
@@ -190,19 +236,9 @@ const Description = styled.p`
     margin: 0 auto;
     width: 50%;
 `;
-const Name = styled.h4`
-    margin: 14px 0;
-    font-weight: 400;
-    text-align: center;
-`;
 const Span = styled.span`
     font-weight: 600;
     color: #000;
-`;
-
-const Place = styled.h5`
-    color: #19ab75;
-    margin: 0;
 `;
 const Heading = styled.h4`
     font-weight: 600;
@@ -243,16 +279,12 @@ const ImgContainer = styled.span`
     }
 `;
 const CollegeName = styled.h4`
-    font-size: 12px;
-    font-family: gordita_medium;
+    font-size: 14px;
     margin-top: 15px;
 `;
 
-
-
-const Location = styled.p`
+const Place = styled.p`
     font-size: 14px;
-    font-family: gordita_medium;
     color: #0fa76f;
     @media all and (max-width: 360px) {
         font-size: 13px;

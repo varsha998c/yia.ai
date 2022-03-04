@@ -15,7 +15,7 @@ import Img11 from "../../assets/images/youtube.svg";
 
 export default function Footer() {
   return (
-    <FooterSection className="container">
+    <FooterSection>
         <Wrapper>
             <ImgContainer>
                 <InnerDiv>
@@ -64,7 +64,6 @@ export default function Footer() {
 
 const FooterSection = styled.section`
     padding: 5% 0;
-    /* background:#1e1e1e; */
 `;
 const Wrapper = styled.div`
     background:#1e1e1e;
