@@ -80,7 +80,7 @@ const H1 = styled.h1`
         width: 80px;
     }
     @media (max-width:480px) {
-        width: 70px;
+        width: 95px;
     }
     @media (max-width:320px) {
         width: 60px;
@@ -125,7 +125,7 @@ const Button = styled.button`
         #40ab79 51%,
         #1e9ba6 100%
     );
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: 600;
     &:hover {
         background-image: linear-gradient(to left, #63bb4c 20%, #1898af 100%);
@@ -134,12 +134,15 @@ const Button = styled.button`
         padding: 15px 27px;
     }
     @media (max-width:768px) {
-        padding: 15px;
+        padding: 17px 34px;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
+    }
+    @media (max-width:640px) {
+        padding: 15px 27px;
     }
     @media (max-width:480px) {
-        padding: 9px;
+        padding: 13px 23px;
         font-weight: 200;
     }
 `;

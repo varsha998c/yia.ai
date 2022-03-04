@@ -108,12 +108,21 @@ const CardSection = styled.section`
 const Wrapper = styled.div`
     margin: 0 auto;
     width: 80%;
+    @media (max-width:1280px) {
+        width: 77%;
+    }
+    @media (max-width:640px) {
+        width: 91%;
+    }
 `;
 const Title = styled.h2`
     color: #0fa76f;
     text-align: center;
     margin: 0 0 25px 0;
     font-size: 26px;
+    @media (max-width:640px){
+        margin: 0 0 9px 0;
+    }
 `;
 const Description = styled.p`
     text-align: center;
@@ -121,6 +130,12 @@ const Description = styled.p`
     width: 30%;
     font-size: 20px;
     font-weight: 700;
+    @media (max-width:640px){
+        width: 45%;
+    }
+    @media (max-width:540px){
+        width: 47%;
+    }
 `;
 const CardDiv = styled.ul`
     display: flex;
@@ -132,6 +147,9 @@ const CardDiv = styled.ul`
     padding: 0;
     @media (max-width:1280px) {
         justify-content: center;
+    }
+    @media (max-width:640px){
+        justify-content: space-between;
     }
 `;
 const InnerCards = styled.li`
@@ -145,6 +163,9 @@ const InnerCards = styled.li`
         @media (max-width:1280px) {
             margin-right: 20px;
         }
+        @media (max-width:640px){
+            margin-right: 0;
+        }
     }
     &:nth-child(8) {
         margin-right: 0;
@@ -152,8 +173,22 @@ const InnerCards = styled.li`
     @media (max-width:1280px) {
         width: calc(33% - 20px);
     }
-
-
+    @media (max-width:768px){
+        width: calc(50% - 20px);
+    }
+    &:nth-child(2) {
+        @media (max-width:640px){
+            margin-right: 0;
+        }
+    }
+    &:nth-child(6) {
+        @media (max-width:640px) {
+            margin-right: 0px;
+        }
+    }
+    @media (max-width:540px){
+            width: calc(50% - 10px);
+    }
 `;
 const Div = styled.div`
     height: 100%;background: linear-gradient(rgba(248, 248, 248, 0) 0%, rgb(0, 0, 0) 100%);
@@ -192,6 +227,9 @@ const CardDetails = styled.div`
             height: 35px;
         }
     }
+    @media (max-width:980px) {
+        bottom: 15px;
+    }
 `;
 const Name = styled.h4`
     margin: 0;
@@ -202,6 +240,14 @@ const Name = styled.h4`
     @media (max-width:1280px) {
         font-size: 24px;
     }
+    @media(max-width:980px){
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+    @media (max-width:768px) {
+        font-size: 24px;
+        padding: 0;
+    }
 `;
 const Studies = styled.p`
     margin: 0;
@@ -209,10 +255,16 @@ const Studies = styled.p`
     font-size: 20px;
     font-weight: 500;
     text-align: center;
+    @media (max-width:980px){
+        font-size: 15px;
+    }
+    @media (max-width:768px) {
+        font-size: 16px;
+    }
 `;
 const ButtonDiv = styled.div`
     background-color:#fff;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     width: 60%;
     margin: 0 auto;
@@ -226,13 +278,14 @@ const ButtonDiv = styled.div`
     &:hover {
         opacity: 1;
     } 
-
-    /* overflow: hidden;
-    height: 0; */
-    /* opacity : 0;
-    &:hover {
+    @media (max-width:768px) {
         opacity: 1;
-    } */
+        height: 30px;
+        width: 80%;
+    }
+    @media (max-width:640px){
+        height: 20px;
+    }
 `;
 const Span = styled.span`
     width: 20px;
@@ -241,13 +294,15 @@ const Span = styled.span`
         display: block;
     }
 `;
-// const Imgs = styled.img`
-//     display: block;
-//     width: 100%;
-//     margin-right:10px ;
-// `;
 const Small = styled.span`
     text-decoration: none;
     color: #000;
     text-transform: uppercase;
+    @media (max-width:768px) {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    @media (max-width:640px){
+        font-size: 13px;
+    }
 `;

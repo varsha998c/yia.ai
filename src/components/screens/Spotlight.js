@@ -94,6 +94,10 @@ const Container = styled.div`
     @media (max-width:980px) {
         padding: 35px 50px;
     }
+    @media (max-width:640px){
+        text-align: center;
+        padding: 35px 13px;
+    }
 `;
 const DivLeft = styled.div`
     width: 45%;
@@ -111,6 +115,13 @@ const ImgContainer = styled.div`
     }
     @media (max-width:980px){
         width: 36%;
+    }
+    @media (max-width:768px) {
+        width: 45%;
+    }
+    @media (max-width:640px){
+        width: 55%;
+        margin: 0 auto;
     }
 `;
 const Img = styled.img`
@@ -137,6 +148,10 @@ const SubTitle = styled.h5`
     @media (max-width:980px) {
         font-size: 23px;
     }
+    @media (max-width:640px){
+        margin-top: 27px;
+        font-size: 20px;
+    }
 `;
 const Small = styled.small`
     color: #0fa76f;
@@ -154,6 +169,9 @@ const Paragraph = styled.p`
         width: 90%;
         font-size: 18px;
         line-height: 1.4;
+    }
+    @media (max-width:768px) {
+        width: 100%;
     }
 `;
 const ImgDiv = styled.div`
@@ -175,7 +193,7 @@ const DivButtons = styled.div`
     margin-top: 30px;
     /* justify-content: space-between; */
     @media (max-width:1280px) {
-        width: 94%;
+        width: 96%;
     }
     @media (max-width:1080px) {
         flex-flow: column wrap;
@@ -210,6 +228,9 @@ const JoinButton = styled.div`
     @media (max-width:1080px) {
         margin-right: 0;
     }
+    @media (max-width:640px) {
+        height: 56px;
+    }
 `;
 const DivButton = styled.div`
     width: 242px;
@@ -227,6 +248,9 @@ const DivButton = styled.div`
         margin-top: 20px;
         width: 235px;
     }
+    @media (max-width:640px) {
+        height: 56px;
+    }
 `;
 const EnquiryButton = styled.div`
     background: #ffff;
@@ -239,6 +263,9 @@ const EnquiryButton = styled.div`
     }
     @media (max-width:1080px) {
         width: 235px;
+    }
+    @media (max-width:640px) {
+        height: 55px;
     }
 `;
 const H6 = styled.h6`
@@ -265,6 +292,12 @@ const DivRight = styled.div`
     @media (max-width:980px) {
         width: 66%;
     }
+    @media (max-width:768px) {
+        width: 92%;
+    }
+    @media (max-width:640px) {
+        width: 88%;
+    }
 `;
 const InnerDiv = styled.div`
     position : relative;
@@ -276,6 +309,9 @@ const ImageDiv = styled.div`
     overflow: hidden;
     border-radius: 30px;
     transform: rotate(3deg);
+    @media (max-width:768px){
+        transform: rotate(2deg);
+    }
 `;
 const ArrowImage = styled.img`
     position: absolute;
@@ -283,6 +319,11 @@ const ArrowImage = styled.img`
     width: 25%;
     left: -16%;
     bottom: -12%;
+    @media (max-width:768px){
+        width: 33%;
+        left: -6%;
+        bottom: -16%;
+    }
 `;
 const PlayContainer = styled.div`
     @media (max-width:1080px) {

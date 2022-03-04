@@ -310,3 +310,8 @@ img.log {
   display: block;
   width: 20px;
 }
+@media (max-width:640px){
+    a.button {
+        padding: 0;
+  }
+}
