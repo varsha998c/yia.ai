@@ -83,16 +83,16 @@ export default function Cards() {
                                 <Img src={item.image} alt="Image"/>
                             </ImageContainer>
                             <Div></Div>
-                            <CardDetails>
-                                <Name>{item.name}</Name>
-                                <Studies>{item.job}</Studies>
-                                <ButtonDiv className='button'>
-                                    <Span>
-                                        <img src={item.icon} alt="Image" />
-                                    </Span>
-                                    <Small>Watch story</Small>
-                                </ButtonDiv>
-                            </CardDetails>
+                                <CardDetails>
+                                    <Name>{item.name}</Name>
+                                    <Studies>{item.job}</Studies>
+                                    <ButtonDiv className='button'>
+                                        <Span>
+                                            <img src={item.icon} alt="Image" />
+                                        </Span>
+                                        <Small>Watch story</Small>
+                                    </ButtonDiv>
+                                </CardDetails>
                         </InnerCards>
                     ))}
             </CardDiv>
@@ -157,7 +157,7 @@ const InnerCards = styled.li`
 `;
 const Div = styled.div`
     height: 100%;background: linear-gradient(rgba(248, 248, 248, 0) 0%, rgb(0, 0, 0) 100%);
-    opacity: 0.5;
+    opacity: 0.4;
     position: absolute;
     width: 100%;
     top: 0px;
@@ -179,15 +179,13 @@ const CardDetails = styled.div`
     width: 100%;
     position: absolute;
     cursor: pointer;
-    bottom: 0px;
+    bottom: 32px;
     right: 0;
     z-index: 8;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: linear-gradient(rgba(248, 248, 248, 0) 0%, rgb(0, 0, 0) 100%);
-    opacity: 0.4;
     border-radius: 10px;
     &:hover {
         .button {
