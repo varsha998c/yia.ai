@@ -310,8 +310,126 @@ img.log {
   display: block;
   width: 20px;
 }
-@media (max-width:640px){
-    a.button {
-        padding: 0;
+@media (max-width:1280px){
+  li.orange {
+    height: 110px;
   }
+  li.blue {
+    height: 110px;
+  }
+  li.green {
+    height: 110px;
+  }
+}
+
+@media (max-width:1080px){
+  div.whatsapp {
+    width: 50px;
+    height: 50px;
+    top: 28px;
+    right: -26px;
+  }
+  div.certificate {
+    width: 50px;
+    height: 50px;
+    top: 28px;
+    right: -26px;
+  }
+  div.scissors {
+    width: 50px;
+    height: 50px;
+    top: 28px;
+    right: -26px;
+  }
+  div.devices {
+    width: 50px;
+    height: 50px;
+    top: 28px;
+    right: -26px;
+  }
+  div.certificate_blue {
+    width: 50px;
+    height: 50px;
+    top: 28px;
+    right: -26px;
+  }
+  li.orange {
+    border: none;
+  }
+  li.green {
+    border: none;
+  }
+  li.blue {
+    border: none;
+  }
+}
+@media (max-width:640px){
+  a.button {
+      padding: 0;
+      width: 95%;
+  }
+  li.orange {
+    padding: 10px;
+    width: 95%;
+  }
+  li.blue{
+    padding: 10px;
+    width: 95%;
+  }
+  li.green {
+    padding: 10px;
+    width: 95%;
+  }
+}
+@media (max-width:540px){
+  li.orange {
+    height: 143px;
+  }
+  li.blue {
+    height: 143px;
+  }
+  li.green {
+    height: 143px;
+  }
+}
+@media (max-width:480px){
+  div.whatsapp{
+      width: 40px;
+      height: 40px;
+      top: 18px;
+      right: -21px;
+  }
+  div.certificate{
+    width: 40px;
+    height: 40px;
+    top: 18px;
+    right: -21px;
+}
+div.scissors{
+  width: 40px;
+  height: 40px;
+  top: 18px;
+  right: -21px;
+}
+div.devices{
+  width: 40px;
+  height: 40px;
+  top: 18px;
+  right: -21px;
+}
+div.certificate_blue{
+  width: 40px;
+  height: 40px;
+  top: 18px;
+  right: -21px;
+}
+li.orange {
+  width: 93%;
+}
+li.green {
+  width: 93%;
+}
+li.blue {
+  width: 93%;
+}
 }

@@ -201,6 +201,9 @@ const GallerySection = styled.section`
     padding: 40px;
     text-align: center;
     background: #e3f4e6;
+    @media (max-width:480px){
+        padding: 40px 20px;
+    }
 `;
 const Container = styled.div`
     /* width: 90%;
@@ -230,11 +233,17 @@ const Title = styled.h2`
     margin: 0 0 25px 0;
     font-size: 35px;
     font-weight: 600;
+    @media (max-width:480px){
+        font-size: 25px;
+    }
 `;
 const Description = styled.p`
     text-align: center;
     margin: 0 auto;
     width: 50%;
+    @media (max-width:480px){
+        width: 90%;
+    }
 `;
 const Span = styled.span`
     font-weight: 600;
@@ -243,6 +252,7 @@ const Span = styled.span`
 const Heading = styled.h4`
     font-weight: 600;
     font-size: 20px;
+    
 `;
 const Count = styled.span`
     color: #1ea070;

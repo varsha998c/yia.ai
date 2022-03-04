@@ -123,6 +123,9 @@ const Title = styled.h2`
     @media (max-width:640px){
         margin: 0 0 9px 0;
     }
+    @media (max-width:480px){
+        font-size: 23px;
+    } 
 `;
 const Description = styled.p`
     text-align: center;
@@ -136,6 +139,10 @@ const Description = styled.p`
     @media (max-width:540px){
         width: 47%;
     }
+    @media (max-width:480px){
+        width: 67%;
+        font-size: 18px;
+    } 
 `;
 const CardDiv = styled.ul`
     display: flex;
@@ -248,6 +255,9 @@ const Name = styled.h4`
         font-size: 24px;
         padding: 0;
     }
+    @media (max-width:480px){
+        font-size: 23px;
+    }
 `;
 const Studies = styled.p`
     margin: 0;
@@ -292,6 +302,9 @@ const Span = styled.span`
     img {
         width: 100%;
         display: block;
+        @media (max-width:480px){
+            display:none;
+        }
     }
 `;
 const Small = styled.span`

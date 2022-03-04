@@ -37,10 +37,10 @@ const Section = styled.section`
 `;
 const Wrapper = styled.div`
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     border-radius: 30px;
     background: #f3f9eb;
-    height: 500px;
+    min-height: 600px;
     position: relative;
 `;
 const Container = styled.div`
@@ -51,16 +51,22 @@ const Container = styled.div`
 `;
 const DivLeft = styled.div`
     width: 50%;
-    padding: 30px 30px 30px 90px;
+    padding: 60px 30px 30px 90px;
 `;
 const Heading = styled.h3`
-    width: 90%;
+    width: 100%;
     color: #333;
-    
-
+    @media (max-width:1280px){
+        width: 96%;
+        font-weight: 900;
+        line-height: 1.3;
+        font-size: 21px;
+    }
 `;
 const Description = styled.p`
     width: 90%;
+    line-height: 1.4;
+    font-size: 20px;
 `;
 const Bold = styled.b`
     color: #636560;
@@ -76,6 +82,10 @@ const ImgContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+    @media (max-width:1280px){
+        margin-top: 32px;
+        width: 80%;
+    }
 `;
 const Anchor = styled.a`
     margin-right: 20px;
@@ -97,4 +107,8 @@ const Image = styled.img`
     position: absolute;
     bottom: -25%;
     right: -5%;
+    @media (max-width:1280px){
+        bottom: -16%;
+        right: -3%;
+    }
 `;

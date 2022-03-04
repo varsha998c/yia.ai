@@ -74,6 +74,9 @@ const SpotlightSection = styled.section`
         z-index: -1;
         padding-bottom: 1%;
         background-image :url(${Img6});
+        @media (max-width:480px){
+            display: none;
+        }
     }
 `;
 const Wrapper = styled.div`
@@ -82,7 +85,9 @@ const Wrapper = styled.div`
     background-color: rgb(243, 249, 235);
     border-radius: 40px;
     padding: 10px 0;
-    
+    @media (max-width:480px){
+        border-radius: 15px;
+    }
 `;
 const Container = styled.div`
     display: flex;
@@ -133,6 +138,9 @@ const Title = styled.h4`
     color: #000;
     font-weight: 600;
     margin: 0;
+    @media (max-width:480px){
+        font-size: 17px;
+    }
     
 `;
 const SubTitle = styled.h5`
@@ -151,6 +159,9 @@ const SubTitle = styled.h5`
     @media (max-width:640px){
         margin-top: 27px;
         font-size: 20px;
+    }
+    @media (max-width:480px){
+        font-size: 19px;
     }
 `;
 const Small = styled.small`
@@ -173,6 +184,9 @@ const Paragraph = styled.p`
     @media (max-width:768px) {
         width: 100%;
     }
+    @media (max-width:480px) {
+        font-size: 17px;
+    }
 `;
 const ImgDiv = styled.div`
     width: 80%;
@@ -180,7 +194,9 @@ const ImgDiv = styled.div`
         width: 80%;
         margin: 0px auto;
     }
-
+    @media (max-width:480px){
+        width: 90%;
+    }
 `;
 const Image = styled.img`
     width: 100%;
@@ -323,6 +339,10 @@ const ArrowImage = styled.img`
         width: 33%;
         left: -6%;
         bottom: -16%;
+    }
+    @media (max-width:480px){
+        left: -2%;
+        bottom: -30%;
     }
 `;
 const PlayContainer = styled.div`

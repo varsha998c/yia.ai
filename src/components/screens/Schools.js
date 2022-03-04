@@ -81,6 +81,9 @@ const Heading = styled.h2`
     font-size: 25px;
     font-weight: 500;
     font-size: 40px;
+    @media (max-width:980px){
+        font-size: 30px;
+    }
 `;
 const Span = styled.h2`
     margin: 0;
@@ -88,16 +91,33 @@ const Span = styled.h2`
     font-weight: 500;
     text-align: center;
     font-size: 40px;
+    @media (max-width:980px){
+        font-size: 30px;
+    }
 `;
 const Details = styled.ul`
     display: flex;
     flex-wrap : wrap;
     align-items: flex-start;
     align-items: flex-start;
-    width: 80%;
+    width: 100%;
     margin: 60px auto;
     padding: 0;
     justify-content : space-between;
+    @media (max-width:980px){
+        display: flex;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 50px auto 35px;
+        position: relative;
+        gap: 30px;
+    }
+    @media (max-width:768px){
+        align-items: flex-start;
+        gap: 20px;
+    }
 `;
 const CardDiv = styled.li`
     width: 26%;
@@ -111,9 +131,23 @@ const CardDiv = styled.li`
     &:nth-child(4) {
         margin-left : auto;
         margin-right: 14%;
+        @media (max-width:980px){
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     &:nth-child(5) {
         margin-right: auto;
+    }
+    @media (max-width:980px){
+        width: 55%;
+        margin: 30px auto 0;
+    }
+    @media (max-width:768px){
+        width: 47%;
+    }
+    @media (max-width:480px){
+        width: 87%;
     }
 `;
 const Count = styled.small`
@@ -123,14 +157,52 @@ const Count = styled.small`
     position: absolute;
     z-index: 1;
     top: -52px;
-    left: 73px;
+    left: 96px;
+    @media (max-width:1280px){
+        left: 63px;
+    }
+    @media (max-width:1080px){
+        top: -53px;
+        width: 50px;
+        left: 54px;
+    }
+    @media (max-width:980px){
+        left: 132px;
+    }
+    @media (max-width:768px){
+        left: 78px;
+    }
+    @media (max-width:640px){
+        left: 55px;
+    }
+    @media (max-width:540px){
+        left: 40px;
+    }
+    @media (max-width:480px){
+        left: 90px;
+        top: -47px;
+        font-size: 54px;
+    }
 `;
 const DivContainer = styled.div`
     background: #009a66;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 35px;
     transform: rotate(45deg);
+    @media (max-width:1080px){
+        width: 110px;
+        height: 110px;
+        border-radius: 22px;
+    }
+    @media (max-width:640px){
+        border-radius: 32px;
+    }
+    @media (max-width:480px){
+        width: 80px;
+        height: 80px;
+        border-radius: 25px;
+    }
 `;
 const ImageContainer = styled.div`
     
@@ -148,7 +220,7 @@ const Bold = styled.b`
     color: #646462;
 `;
 const RegisterButton = styled.button`
-    width: 16%;
+    width: 22%;
     margin: 0 auto;
     border: none;
     height: 59px;
@@ -166,5 +238,22 @@ const RegisterButton = styled.button`
     font-size: 18px;
     &:hover {
         background-image: linear-gradient(to left, #63bb4c 20%, #1898af 100%);
+    }
+    @media (max-width:980px){
+        width: 30%;
+    }
+    @media (max-width:768px){
+        width: 37%;
+    }
+    @media (max-width:640px){
+        width: 43%;
+        height: 53px;
+    }
+    @media (max-width:540px){
+        width: 50%;
+        height: 50px;
+    }
+    @media (max-width:480px){
+        width: 60%;
     }
 `;

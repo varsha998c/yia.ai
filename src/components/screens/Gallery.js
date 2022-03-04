@@ -111,6 +111,9 @@ const Title = styled.h2`
     @media (max-width:980px){
         font-size: 24px;
     }
+    @media (max-width:480px){
+        font-size: 18px;
+    }
     
 `;
 const Description = styled.p`
@@ -122,6 +125,10 @@ const Description = styled.p`
     }
     @media (max-width:540px){
         width: 90%;
+    }
+    @media (max-width:480px){
+        width: 96%;
+        font-size: 14px;
     }
 `;
 const CardDiv = styled.ul`
@@ -217,7 +224,7 @@ const InnerCards = styled.li`
 `;
 const ImageContainer = styled.div`
     width: 92%;
-    margin: 10px 10px;
+    margin: 10px auto;
     overflow: hidden;
     border-radius: 10px;
 `;
@@ -237,6 +244,9 @@ const Name = styled.h4`
     @media(max-width:540px){
         margin: 20px 0px;
         font-size: 17px;
+    }
+    @media (max-width:480px){
+        font-size: 14px;
     }
 `;
 const Span = styled.span`
@@ -273,6 +283,9 @@ const CardImage = styled.div`
         bottom: 15px;
         width: 27%;
         right: 2px;
+    }
+    @media (max-width:480px){
+        width: 35%;
     }
 `;
 const Card = styled.img`
