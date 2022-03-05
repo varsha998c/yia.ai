@@ -11,7 +11,7 @@ import Img6 from "../../assets/images/elipse.svg";
 
 export default function Spotlight() {
   return (
-    <SpotlightSection className="container">
+    <SpotlightSection>
         <Wrapper>
             <Container>
             <DivLeft>
@@ -60,7 +60,7 @@ export default function Spotlight() {
 
 const SpotlightSection = styled.section`
     padding-top: 130px;
-    max-width: 1380px;
+    /* max-width: 1380px; */
     padding-bottom: 20px;
     position: relative;
     &:after {
