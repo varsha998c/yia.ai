@@ -96,34 +96,65 @@ const Heading = styled.h3`
     color: #1b9f6f;
     font-weight: 500;
     font-size: 35px;
+    @media (max-width:640px){
+        font-size:32px;
+        width:61%;
+    }
+    @media (max-width:540px){
+        font-size:28px;
+    }
+    @media (max-width:480px){
+        width:80%;
+    }
+    
 `;
 const Span = styled.span`
     color: #000;
 `;
 const Ul = styled.ul`
-    width: 70%;
+    padding:0;
+    width: 67%;
     margin: 50px auto;
+    @media (max-width:1280px){
+        width:80%;
+    }
+    @media (max-width:1080px){
+        width: 90%;
+    }
+    @media (max-width:1080px){
+        width: 100%;
+    }
+
 `;
 const Li = styled.li`
     list-style: none;
     background-color: #f3f9eb;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 40px;
     padding: 0 30px;
     border: 1px solid #dfe9d0;
-
+    @media (max-width:1280px){
+        border:none ;
+    }
+    @media (max-width:768px){
+        padding: 0px 25px;
+    }
 `;
 const Items = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    @media (max-width:768px){
+    }
 `;
 const Description = styled.p`
     color: #525451;
     font-size: 16px;
-    font-weight: 600;
-    
+    font-weight: 500;
+    @media (max-width:768px){
+        text-align: left;
+    }
 `;
 const Img = styled.img`
     cursor: pointer;

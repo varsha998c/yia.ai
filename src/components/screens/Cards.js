@@ -258,6 +258,9 @@ const Name = styled.h4`
     @media (max-width:480px){
         font-size: 23px;
     }
+    @media (max-width:360px){
+        font-size:16px;
+    }
 `;
 const Studies = styled.p`
     margin: 0;
@@ -270,6 +273,9 @@ const Studies = styled.p`
     }
     @media (max-width:768px) {
         font-size: 16px;
+    }
+    @media (max-width:360px){
+        font-size:14px;
     }
 `;
 const ButtonDiv = styled.div`

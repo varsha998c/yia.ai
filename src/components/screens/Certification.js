@@ -11,7 +11,6 @@ export default function Certification() {
         <Wrapper>
             <Img src={Img1} alt="Image"/>
             <CertificationDiv>
-                
                 <Heading>Certification</Heading>
                 <Description>പ്രോഗ്രാം പൂർത്തിയാക്കുന്ന എല്ലാ വിദ്യാർത്ഥികൾക്കും സ്കൂൾ ലോഗോയോടു കൂടിയ കംപ്ലീഷൻ സർട്ടിഫിക്കറ്റുകൾ.</Description>
             </CertificationDiv>
@@ -58,6 +57,9 @@ const Wrapper = styled.div`
     @media (max-width:540px){
         min-height: 500px;
     }
+    @media (max-width:360px){
+        min-height: 470px;
+    }
 `;
 const CertificationDiv = styled.div`
     padding-left : 50px;
@@ -93,6 +95,9 @@ const Img = styled.img`
     }
     @media (max-width:480px){
         width: 29px;
+    }
+    @media (max-width:360px){
+        width: 22px;
     }
 
 `;
@@ -169,6 +174,10 @@ const Container = styled.div`
     @media (max-width:480px){
         width: 250px;
         right: -59px;
+    }
+    @media (max-width:360px){
+        width: 228px;
+        right: -64px;
     }
 `;
 const Certificate = styled.img`

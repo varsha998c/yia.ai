@@ -128,6 +128,9 @@ const Description = styled.h5`
     @media (max-width:480px){
         line-height: 1.5;
     }
+    @media (max-width:360px){
+        font-size: 15px;
+    }
 `;
 const Span = styled.span`
     color: #4f9877;

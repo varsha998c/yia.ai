@@ -78,6 +78,9 @@ const SpotlightSection = styled.section`
             display: none;
         }
     }
+    @media (max-width:360px){
+            padding-top:81px;
+}
 `;
 const Wrapper = styled.div`
     width: 95%;
@@ -247,6 +250,9 @@ const JoinButton = styled.div`
     @media (max-width:640px) {
         height: 56px;
     }
+    @media (max-width:360px){
+        width:220px;
+    }
 `;
 const DivButton = styled.div`
     width: 242px;
@@ -267,6 +273,9 @@ const DivButton = styled.div`
     @media (max-width:640px) {
         height: 56px;
     }
+    @media (max-width:360px){
+        width:220px;
+    }
 `;
 const EnquiryButton = styled.div`
     background: #ffff;
@@ -282,6 +291,10 @@ const EnquiryButton = styled.div`
     }
     @media (max-width:640px) {
         height: 55px;
+    }
+    @media (max-width:360px){
+        width: 220px;
+        height: 56px;
     }
 `;
 const H6 = styled.h6`
@@ -351,6 +364,10 @@ const PlayContainer = styled.div`
         align-items: center;
         justify-content: center;
         width: 100%;
+    }
+    @media (max-width:360px){
+        width: 50%;
+        margin: 0 auto;
     }
 `;
 const PlayImage = styled.img`

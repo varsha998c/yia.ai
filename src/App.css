@@ -188,7 +188,8 @@ a.footer {
 }
 a.terms {
   text-transform: capitalize;
-  color: #000;
+  color: #8e8e8e;
+ 
 }
 a.term {
   color: #000;
@@ -296,6 +297,9 @@ a.learning {
     text-transform: capitalize;
     font-size: 17px;
 }
+/* a.color {
+  width: 25px;
+} */
 img.select {
   width: 10px;
   display: block;
@@ -309,6 +313,9 @@ img.leftarrow {
 img.log {
   display: block;
   width: 20px;
+}
+.ytube {
+  margin-right: 0;
 }
 @media (max-width:1280px){
   li.orange {

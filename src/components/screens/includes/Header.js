@@ -55,6 +55,10 @@ const HeaderSection = styled.div`
     @media (max-width: 980px) {
         height: 80px;
     }
+    @media (max-width:480px){
+        height: 68px;
+        padding: 5px 0;
+    }
 `;
 const Wrapper = styled.div`
     width: 85%;
@@ -62,6 +66,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:480px){
+        width: 88%;
+    }
 `;
 const DivLeft = styled.div``;
 const H1 = styled.h1`
@@ -80,7 +87,7 @@ const H1 = styled.h1`
         width: 80px;
     }
     @media (max-width:480px) {
-        width: 95px;
+        width: 83px;
     }
     @media (max-width:320px) {
         width: 60px;
@@ -144,6 +151,9 @@ const Button = styled.button`
     @media (max-width:480px) {
         padding: 13px 23px;
         font-weight: 200;
+    }
+    @media (max-width:360px){
+        padding: 12px 21px;
     }
 `;
 const MenuImage = styled.div`

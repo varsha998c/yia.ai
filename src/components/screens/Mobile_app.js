@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 import Img1 from "../../assets/images/grey-and-play.svg";
 import Img2 from "../../assets/images/mobile-app.png";
 
@@ -13,10 +14,10 @@ export default function Mobile_app() {
                     <Heading>ടാൽറോപിന്റെ OTT കമ്മ്യൂണിറ്റി പ്ലാറ്റ്‌ഫോമായ യായിലൂടെ തികച്ചും സൗജന്യമായി ഇപ്പോൾ തന്നെ പഠനം ആരംഭിക്കൂ</Heading>
                     <Description><Bold>Tefun</Bold>-ലൂടെ ടെക്ക്‌നോളജിയുടെ വിസ്മയലോകം ഇനിയിതാ നിങ്ങളിലേക്ക്. ടെക്ക്-പഠനം ഇനി കൂടുതൽ എളുപ്പമാക്കാൻ  <Span>yia.ai</Span>  മൊബൈൽ ആപ്പ് ഡൗൺലോഡ് ചെയ്യൂ.</Description>
                     <ImgContainer>
-                        <Anchor>
+                        <Anchor href="/">
                             <Img src={Img1} alt="Image" />
                         </Anchor>
-                        <Anchor className='ytube'>
+                        <Anchor href="/" className='ytube'>
                             <Img src={Img1} alt="Image" />
                         </Anchor>
                     </ImgContainer>
@@ -64,6 +65,9 @@ const Container = styled.div`
     @media (max-width:640px){
         padding:0 20px;
     }
+    @media (max-width:480px){
+        height: 654px;
+    }
 `;
 const DivLeft = styled.div`
     width: 50%;
@@ -72,6 +76,12 @@ const DivLeft = styled.div`
         width: 100%;
         margin: 0 auto;
         padding: 27px 0;
+    }
+    @media (max-width:480px){
+        height: 675px;
+    }
+    @media (max-width:360px) {
+        height:388px;
     }
 `;
 const Heading = styled.h3`
@@ -99,6 +109,10 @@ const Heading = styled.h3`
     @media (max-width:540px){
         width: 90%;
     }
+    @media (max-width:480px){
+        width: 100%;
+        font-size: 16px;
+    }
 `;
 const Description = styled.p`
     width: 90%;
@@ -123,6 +137,9 @@ const Description = styled.p`
         font-size: 15px;
         width: 90%;
         margin: 20px auto 0;
+    }
+    @media (max-width:360px){
+        width: 100%;
     }
 `;
 const Bold = styled.b`
@@ -149,7 +166,8 @@ const ImgContainer = styled.div`
         justify-content: center;
     }
 `;
-const Anchor = styled.div`
+const Anchor = styled.a`
+    cursor: pointer;
     margin-right: 20px;
     @media (max-width:1080px){
         height: 57px;
@@ -170,7 +188,7 @@ const ImageContainer = styled.div`
      width: 640px;
      transform: translateY(63px);
      @media (max-width:1280px){
-        width: 553px;
+        width: 541px;
         transform: translateY(109px);
      }
      @media (max-width:1080px) {
@@ -188,6 +206,13 @@ const ImageContainer = styled.div`
         width: 335px;
         transform: translate(-50px,57px);
      }
+    @media (max-width:480px){
+        width: 254px;
+        transform: translate(-39px,20px);
+    }
+    @media (max-width:360px){
+        width: 208px;
+    }
     
 `;
 const Image = styled.img`

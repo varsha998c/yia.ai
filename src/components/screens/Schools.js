@@ -84,6 +84,9 @@ const Heading = styled.h2`
     @media (max-width:980px){
         font-size: 30px;
     }
+    @media (max-width:360px){
+        font-size: 24px;
+    }
 `;
 const Span = styled.h2`
     margin: 0;
@@ -93,6 +96,9 @@ const Span = styled.h2`
     font-size: 40px;
     @media (max-width:980px){
         font-size: 30px;
+    }
+    @media (max-width:360px){
+        font-size: 24px;
     }
 `;
 const Details = styled.ul`
@@ -183,6 +189,11 @@ const Count = styled.small`
         top: -47px;
         font-size: 54px;
     }
+    @media (max-width:360px){
+        left: 83px;
+        top: -35px;
+        font-size: 42px;
+    }
 `;
 const DivContainer = styled.div`
     background: #009a66;
@@ -255,5 +266,8 @@ const RegisterButton = styled.button`
     }
     @media (max-width:480px){
         width: 60%;
+    }
+    @media (max-width:360px){
+        width: 70%;
     }
 `;

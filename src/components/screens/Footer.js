@@ -63,11 +63,11 @@ export default function Footer() {
 }
 
 const FooterSection = styled.section`
-    padding: 5% 0;
+    padding: 5% 0 0;
 `;
 const Wrapper = styled.div`
     background:#1e1e1e;
-    padding: 50px 0;
+    padding: 80px 0 50px;
     text-align: center;
 `;
 const ImgContainer = styled.div`
@@ -84,6 +84,9 @@ const Image = styled.img`
 `;
 const MiddleDiv = styled.div`
     margin-top: 40px;
+    @media (max-width:1290px){
+        margin-top:20px;
+    }
 `;
 const IconDiv = styled.div`
     display: flex;
@@ -91,6 +94,31 @@ const IconDiv = styled.div`
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:1280px){
+        width: 18%;
+    }
+    @media (max-width:1080px){
+        width: 20%;
+    }
+    @media (max-width:980px){
+        width: 25%;
+    }
+    @media (max-width:768px){
+        width: 30%;
+    }
+    @media (max-width:640px){
+        width: 35%;
+    }
+    @media (max-width:540px){
+        width: 40%;
+    }
+    @media (max-width:480px){
+        width: 50%;
+    }
+    @media (max-width:360px){
+        width: 60%;
+    }
+    
 `;
 const Icon = styled.a`
     padding: 10px;
@@ -100,6 +128,12 @@ const Icon = styled.a`
     }
     &:hover .color{
         display: block;
+    }
+    @media (max-width:1280px){
+        height: 22px;
+    }
+    @media (max-width:1080px){
+        /* height: 20px; */
     }
 `;
 const Img = styled.img`
@@ -120,6 +154,28 @@ const FooterDiv = styled.div`
     -ms-flex-pack: center;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:1280px){
+        width:44%;
+    }
+    @media (max-width:1080px){
+        width:49%;
+    }
+    @media (max-width:980px){
+        width:69%;
+    }
+    @media (max-width:768px){
+        width:75%;
+    }
+    @media (max-width:640px){
+        width:87%;
+    }
+    @media (max-width:540px){
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        margin: 50px 0 0 0;
+    }
+
 `;
 const Description = styled.p`
     color: #8e8e8e;
@@ -130,6 +186,16 @@ const Right = styled.div`
     width: 46%;
     display: flex;
     justify-content: space-between;
+    @media (max-width:540px){
+        margin-top: 20px;
+    }
+    @media (max-width:480px){
+        width: 62%;
+        font-size: 15px;
+    }
+    @media (max-width:360px){
+        width:70%;
+    }
 `;
 const Numbers = styled.div`
     width: 16%;
@@ -141,6 +207,31 @@ const Numbers = styled.div`
     justify-content: space-between;
     align-items: center;
     color: #8e8e8e;
+    @media (max-width:1280px){
+        width: 23%;
+    }
+    @media (max-width:1080px){
+        width: 26%;
+    }
+    @media (max-width:980px){
+        width: 33%;
+    }
+    @media (max-width:768px){
+        width: 39%;
+    }
+    @media (max-width:640px){
+        width: 47%;
+    }
+    @media (max-width:540px){
+        width: 52%;
+    }
+    @media (max-width:480px){
+        width:70%;
+    }
+    @media (max-width:360px){
+        width:77%;
+    }
+
 `;
 const Phone = styled.h6`
     margin: 0;

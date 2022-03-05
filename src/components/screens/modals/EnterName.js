@@ -29,7 +29,7 @@ export default function EnterName() {
                     </Link>
                 </ContentDiv>
                 <FooterDiv>
-                    <a href="#" className="terms">
+                    <a href="#" className="term">
                         Terms of service
                     </a>
                 </FooterDiv>
@@ -79,6 +79,9 @@ const LoginSection = styled.section`
             from {right:-200px;}
             to {right:2px;}
         }
+    @media (max-width:1280px){
+        width:600px;
+    }
 `;
 const Login = styled.div`
     width: 80%;
@@ -106,6 +109,7 @@ const Paragraph = styled.p`
     margin: 10px 0 20px;
     width: 70%;
     font-size: 17px;
+    font-weight: 600;
 `;
 const FormDiv = styled.div`
     display: flex;
