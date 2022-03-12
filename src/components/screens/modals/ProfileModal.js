@@ -93,6 +93,29 @@ const Wrapper = styled.div`
         from {right:-200px;}
         to {right:2px;}
     }
+    @media (max-width:1280px){
+        width: 26%;
+        height: 558px;
+    }
+    @media (max-width:980px){
+        width: 35%;
+    }
+    @media (max-width:768px){
+        width: 46%;
+    }
+    @media (max-width:640px){
+        width: 50%;
+    }
+    @media (max-width:540px){
+        width: 58%;
+    }
+    @media (max-width:480px){
+        width: 73%;
+    }
+    @media (max-width:360px){
+        width: 80%;
+        height: 557px;
+    }
 `;
 const Profile = styled.div`
     height: 165px;
@@ -139,7 +162,35 @@ const NameIcon = styled.div`
     font-size: 30px;
     top:221px;
     position: absolute;
-    left: 120px;
+    left: 99px;
+    @media (max-width:1280px){
+        left: 114px;
+        width: 90px;
+        height: 90px;
+    }
+    @media (max-width:1080px){
+        left: 103px;
+    }
+    @media (max-width:980px) {
+        left: 112px;
+    }
+    @media (max-width:768px){ 
+        left: 123px;
+    }
+    @media (max-width:640px){ 
+        left: 108px;
+    }
+    @media (max-width:540px){
+        left: 114px;
+    }
+    @media (max-width:480px){
+        width: 80px;
+        height: 80px;
+        top: 236px;
+    }
+    @media (max-width:360px){
+        left: 106px;
+    }
 `;
 const Name =styled.h4`
     color: #4c565a;
@@ -192,4 +243,7 @@ const LogOut = styled.div`
     font-size: 15px;
     display: flex;
     cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
 `;

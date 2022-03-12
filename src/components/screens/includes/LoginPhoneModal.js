@@ -140,9 +140,12 @@ const Login = styled.div`
     @media (max-width:480px){
         width:100%;
     }
+    @media (max-width:360px){
+        padding: 50px 0 30px 22px;
+    }
 `;
 const ContentDiv = styled.div`
-    padding-top: 100px;
+    padding-top: 145px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,6 +188,9 @@ const Paragraph = styled.p`
     @media (max-width:480px){
         width:81%;
     }
+    @media (max-width:360px){
+        width:100%;
+    }
 `;
 const FormDiv = styled.div`
     display: flex;
@@ -207,7 +213,6 @@ const ImageDiv = styled.div`
     display: flex;
     border-radius: 50%;
     width: 40px;
-    border-radius: 50%;
     overflow: hidden;
     margin-right: 5px;
     height: 40px;
@@ -227,6 +232,9 @@ const FillingPart = styled.div`
     @media (max-width:980px){
         margin-left:0;
     }
+    @media (max-width:360px){
+        padding:10px 8px;
+    }
 `;
 const Input = styled.input`
     width: 95%;
@@ -237,6 +245,9 @@ const Input = styled.input`
     font-weight: 600;
     @media (max-width:640px){ 
         font-size:15px;
+    }
+    @media (max-width:360px){ 
+        font-size:12px;
     }
 `;
 const Links = styled.button`
@@ -270,7 +281,7 @@ const AcountDiv = styled.div`
 `;
 const FooterDiv = styled.div`
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
     border-top: 1px dotted #333;
     @media (max-width:640px){
         margin-top: 44px;

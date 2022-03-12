@@ -51,7 +51,7 @@ function ExamStart() {
                 <Right>
                     <Div>
                         <Span>Time remaining</Span>
-                        <Time>03:00:00</Time>
+                        <Time>03 : 00 : 00</Time>
                     </Div>
                 </Right>
             </TimeDiv>
@@ -98,24 +98,60 @@ const TimeDiv = styled.div`
     justify-content: space-between;
 `;
 const Left = styled.div`
+    margin-left: 22px;
     width: 16%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:1080px){
+        width: 20%;
+    }
+    @media (max-width:980px){
+        width: 24%;
+    }
+    @media (max-width:768px){
+        width: 26%;
+    }
+    @media (max-width:640px){
+        width: 28%;
+    }
+    @media (max-width:480px){
+        width: 36%;
+    }
+    @media (max-width:360px){
+        width: 40%;
+    }
 `;
 const IconContainer = styled.div`
-    width: 50px;
+    width: 55px;
     margin-right: 10px;
-    height: 50px;
+    height: 45px;
     background-color: #d2814a;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:1080px){
+        width: 50px;
+    }
+    @media (max-width:768px){
+        width: 45px;
+        height: 45px;
+    }
+    @media (max-width:640px) {      
+        width: 43px;
+        height: 34px;
+    }
+    @media (max-width:540px){
+        width: 44px;
+    }
 `;
 const Icon = styled.img`
     display: block;
     width: 20px;
+    @media (max-width:768px){
+        width: 18px;
+    }
 `;
 const Examination = styled.h4`
     color: #545454;
@@ -123,10 +159,25 @@ const Examination = styled.h4`
     font-weight: 600;
     margin: 0;
     font-size: 18px;
+    @media (max-width:768px){
+        font-size: 16px;
+    }
 `;
 const Right = styled.div`
     width: 10%;
     padding-right: 32px;
+    @media (max-width:1080px){
+        width: 15%;
+    }
+    @media (max-width:768px){
+        width: 20%;
+    }
+    @media (max-width:540px){
+        width: 25%;
+    }
+    @media (max-width:480px){
+        width: 30%;
+    }
 `;
 const Div = styled.div`
     display: flex;
@@ -139,10 +190,25 @@ const Div = styled.div`
 const Span = styled.span`
     text-transform: capitalize;
     font-size: 14px;
+    @media (max-width:540px){ 
+        font-size: 13px;
+    }
+    @media (max-width:480px){
+        font-size: 12px;
+    }
 `;
 const Time = styled.small`
     font-weight: 800;
     font-size: 20px;
+    @media (max-width:640px){
+        font-size: 18px;
+    }
+    @media (max-width:540px){ 
+        font-size: 16px;
+    }
+    @media (max-width:480px){
+        font-size: 14px;
+    }
 `;
 const InstDiv = styled.div`
     margin-top: 5px;
@@ -154,6 +220,15 @@ const Contents = styled.div`
     width: 60%;
     margin: 0px auto;
     padding: 125px 0;
+    @media (max-width:980px){
+        padding: 6px 0;
+    }
+    @media (max-width:480px){
+        width: 85%;
+    }
+    @media (max-width:360px){
+        width: 90%;
+    }
 `;
 const Instructions = styled.h2`
     color: #494a49;
@@ -161,6 +236,15 @@ const Instructions = styled.h2`
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 40px;
+    @media (max-width:768px){
+        font-size: 18px;
+    }
+    @media (max-width:480px){
+        font-size: 16px;
+    }
+    @media (max-width:360px){
+        font-size: 15px;
+    }
 `;
 const Ul = styled.ul`
     padding: 0;
@@ -207,6 +291,12 @@ const Button = styled.div`
     position: absolute;
     right: 325px;
     bottom: auto;
+    @media (max-width:768px){
+        left: 36%;
+    }
+    @media (max-width:480px){
+        left: 29%;
+    }
 `;
 const Exam = styled.div`
     width: 50px;
@@ -217,6 +307,16 @@ const Exam = styled.div`
     top: 53%;
     left: 13%;
     align-items: center;
+    @media (max-width:980px){
+        left: 9%;
+        top: 45%;
+    }
+    @media (max-width:768px){
+        left: 5%;
+    }
+    @media (max-width:480px){
+        display: none;
+    }
 `;
 const Start = styled.div`
     width: 10px;

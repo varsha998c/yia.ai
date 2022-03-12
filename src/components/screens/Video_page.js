@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Img1 from "../../assets/images/images.png";
-import Img2 from "../../assets/images/images.jpg";
 import Img3 from "../../assets/images/down-arrow.svg";
 import Img5 from "../../assets/images/i.jpg";
 import Img6 from "../../assets/images/1080.svg";
@@ -220,7 +219,7 @@ export default function Video_page() {
                         onClick={ ()=> { setsubHeadingId(subheading.id)}}
                         >
                             <Mark>
-                                <Tick src={Img2} alt="Image" />
+                                <Tick src={require("../../assets/images/green-tick.svg").default} alt="Image" />
                                 <Content>{subheading.title}</Content>
                             </Mark>
                             <Time>{subheading.duration}</Time>
@@ -262,18 +261,18 @@ export default function Video_page() {
                             <H5>introduction</H5>
                         </Intro>
                         <Button>
-                            <a href='#' className='mark'>
-                                <Marks>
+                            <a href='#' className='learning'>
+                                {/* <Marks>
                                     <Icon src={Img2} alt="Image" />
-                                </Marks>
-                                <Complete onClick={()=>setClgModal(true)}>mark as completed</Complete>
+                                </Marks> */}
+                                <Complete onClick={()=>setClgModal(true)}>Mark as completed</Complete>
                                 <CollegeDetailView clgModal={clgModal} setClgModal={setClgModal}/>
                             </a>
                         </Button>
                     </BottomDiv>
                 </Container>
                 <ImgContainer>
-                    <Imgs src={Img7} alt="Image" />
+                    <Imgs src={Img7} alt="Image" className='ad'/>
                     <Imgs src={Img6} alt="Image" />
                 </ImgContainer>
             </LeftDiv>
@@ -292,12 +291,21 @@ export default function Video_page() {
 const VideoSection = styled.section`
     padding: 80px 0 20px;
     height: calc(100vh - 80px);
+    @media (max-width:480px){
+        position: relative;
+    }
 `;
 const Wrapper = styled.div`
     width: 95%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media (max-width:1080px){
+        flex-direction: column;
+    }
+    @media (max-width:480px){
+        width: 100%;
+    }
 `;
 const AlertDiv = styled.div`
     background-color: #fff3eb;
@@ -307,6 +315,14 @@ const AlertDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:480px){
+        flex-direction: column;
+        top: 10%;
+        position: fixed;
+        margin: 2px auto;
+        width: 90%;
+        left: 16px;
+    }
 `;
 const AlertLeft = styled.div`
     width: 70%;
@@ -314,15 +330,27 @@ const AlertLeft = styled.div`
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
+    @media (max-width:1280px){
+        padding: 5px 11px;
+    }
+    @media (max-width:480px){
+        width: 94%;
+    }
 `;
 const Image = styled.img`
     width: 30px;
     height: 24px;
     display: block;
     margin-top: 10px;
+    @media (max-width:1280px){
+        width: 34px;
+    }
 `;
 const ContentDiv = styled.div`
     margin-left: 25px;
+    @media (max-width:480px){
+        margin-left: 2px;
+    }
 `;
 const Title = styled.h4`
     color: #d6835c;
@@ -332,9 +360,31 @@ const Title = styled.h4`
 `;
 const Description = styled.p`
     width: 80%;
+    @media (max-width:1280px){
+        width: 100%;
+    }
+    @media(max-width:768px){
+        font-size: 13px;
+    }
 `;
 const AlertRight = styled.div`
     width: 10%;
+    @media (max-width:1280px){
+        width: 11%;
+        margin-right: 16px;
+    }
+    @media (max-width:1080px){
+        width: 14%;
+    }
+    @media (max-width:640px){
+        width: 16%;
+    }
+    @media (max-width:540px){
+        width: 18%;
+    }
+    @media (max-width:480px){
+        width: 25%;
+    }
 `;
 const Start = styled.button`
     padding: 15px 26px;
@@ -343,24 +393,74 @@ const Start = styled.button`
     background: #e4794b;
     color: #fff;
     cursor: pointer;
+    @media (max-width:1080px){
+        padding: 15px 21px;
+    }
+    @media (max-width:768px){
+        padding: 15px 13px;
+    }
+    @media (max-width:640px){
+        padding: 15px 11px;
+    }
 `;
 const LeftDiv = styled.div`
     width: 65%;
     border-radius: 15px;
+    @media (max-width:1280px){
+        width: 82%;
+    }
+    @media (max-width:1080px){
+        width: 100%;
+    }
 `;
 const Container = styled.div`
     width:90%;
     background-color: #f5f5f5;
     padding: 10px;
+    @media (max-width:1280px){
+        width: 94%;
+    }
+    @media (max-width:1080px){
+        width: 98%;
+    }
+    @media (max-width:768px){
+        width: 96%;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+    @media (max-width:480px){
+        padding: 0;
+        width: 100%;
+        background-color: #fff;
+    }
 `;
 const VideoContainer = styled.div`
     width: 100%;
     margin: 0 auto;
+    @media (max-width:1080px){
+        width: 98%;
+        margin: 10px;
+    }
+    @media (max-width:768px){
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+    @media (max-width:640px){
+        width: 98%;
+        margin: 0 auto;
+    }
+    @media (max-width:480px){
+        width: 100%;
+        position: fixed;
+    }
 `;
 const Img = styled.img`
     width: 100%;
     display: block;
-    border-radius: 10px;
+    @media (max-width:480px){
+        position: fixed;
+        top: 39% ;
+    }
 `;
 const BottomDiv  = styled.div`
     display: flex;
@@ -368,6 +468,21 @@ const BottomDiv  = styled.div`
     margin: 20px auto;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:1080px){
+        width: 98%;
+        margin: 0 auto;
+    }
+    @media (max-width:768px){
+        flex-direction: column;
+        align-items: baseline;
+    }
+    @media (max-width:640px){
+        margin-top: 16px;
+    }
+    @media (max-width:480px){
+        margin-top: 108%;
+        width: 91%;
+    }
 `;
 const Intro = styled.div`
 
@@ -375,6 +490,13 @@ const Intro = styled.div`
 const H6 = styled.h6`
     color: #9fa4a7;
     margin: 0;
+    @media (max-width:768px){
+        font-size: 17px;
+    }
+    @media (max-width:480px){
+        margin-top: 10px;
+        font-size: 16px;
+    }
 `;
 const H5 = styled.h5`
     color: #343e44;
@@ -382,6 +504,13 @@ const H5 = styled.h5`
     font-size: 23px;
     margin: 0;
     font-weight: 500;
+    @media (max-width:768px){
+        font-size: 28px;
+        font-weight: 700;
+    }
+    @media (max-width:480px){
+        font-size: 24px;
+    }
 `;
 const Button = styled.div`
     width: 185px;
@@ -389,6 +518,24 @@ const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-image: linear-gradient(to left, #63bb4c 20%, #1898af 100%);
+    @media (max-width:1280px){
+        width: 270px;
+    }
+    @media (max-width:768px){
+        width: 100%;
+        margin-top: 10px;
+    }
+    @media (max-width:540px){
+        width: 60%;
+        height: 45px;
+    }
+    @media (max-width:480px){
+        width: 75%;
+    }
 `;
 const Marks = styled.div`
     width: 16px;
@@ -400,28 +547,48 @@ const Icon = styled.img`
 `;
 const Complete = styled.div`
     font-weight: 400;
-    margin: 0 0 0 10px;
-    text-transform: capitalize;
+    margin: 0 0 0 10px; 
+    text-transform: none;
     font-size: 15px;
-
+    color: #fff;
 `;
 const RightDiv = styled.div`
     width: 30%;
+    @media (max-width:1280px){
+        width: 31%;
+    }
+    @media (max-width:1080px){
+        width: 100%;
+    }
 `;
 const Ul = styled.ul`
     padding: 0;
     margin-top: 0;
     margin-left: 20px;
+    @media (max-width:1280px){
+        margin-left: 0;
+    }
 `;
 const Li = styled.li`
     cursor: pointer;
     list-style: none;
+    margin-bottom: 20px;
     &.active div{
         display: flex;
     }
     & .dropactive{
         transform: rotatez(271deg);
     }
+    @media (max-width:480px){
+        width: 91%;
+        margin: 0 auto 10px;
+    }
+    /* &:last-child {
+        @media (max-width:480px){
+            position: relative;
+
+        }
+    } */
 `;
 
 const Header = styled.div`
@@ -431,7 +598,6 @@ const Header = styled.div`
     justify-content: space-between;
     padding: 20px 16px;
     align-items: center;
-    margin-top: 30px;
 `;
 
 const Mark = styled.div`
@@ -448,11 +614,16 @@ const SubHeading = styled.div`
     border-radius: 10px;
     padding: 0 10px;
     margin: 10px 0;
+    color: #7e7e80;
     justify-content: space-between;
     align-items: center;
     display: none;
     &:hover {
     background-image: linear-gradient(to right,#63bb4c 0%,#40ab79 51%,#1e9ba6 100%);
+    color: #fff;
+    }
+    @media (max-width:540px){
+        padding: 0px 29px;
     }
 
 `;
@@ -469,17 +640,31 @@ const Content = styled.h3`
     font-weight: 400;
     text-transform: capitalize;
     font-size: medium;
-    color: #7e7e80;
+    /* color: #7e7e80; */
     margin: 20px 30px;
+    @media (max-width:360px){
+        margin: 3px 11px;
+        font-size: 13px;
+    }
 `;
 const Time = styled.span`
-    color: #000;
+    /* color: #000; */
     margin-left: 50px;
 `;
 const ImgContainer = styled.div`
     width: 92%;
     display: flex;
     flex-direction: column;
+    @media (max-width:1080px){
+        width: 100%;
+    }
+    @media (max-width:540px){
+        margin-top: 10px;
+    }
+    @media (max-width:540px){
+        width: 91%;
+        margin: 0 auto;
+    }
 `;
 const Imgs = styled.img`
     margin-bottom: 20px;

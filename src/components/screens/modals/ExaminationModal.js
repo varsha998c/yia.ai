@@ -30,12 +30,12 @@ function ExaminationModal() {
         {
             id:4,
             round:"",
-            point: "ഓരോ ശ രിയുത്തരത്തിനും ഓരോ മാർക്ക് വീതം ലഭിക്കും ",
+            point: "ഓരോ ശരിയുത്തരത്തിനും ഓരോ മാർക്ക് വീതം ലഭിക്കും",
         },
         {
             id:5,
             round:"",
-            point: "25 ചോദ്യങ്ങൾ ആവും ഉണ്ടാവുക   ",
+            point: "25 ചോദ്യങ്ങൾ ആവും ഉണ്ടാവുക",
         },
         {
             id:6,
@@ -115,24 +115,60 @@ const TimeDiv = styled.div`
     justify-content: space-between;
 `;
 const Left = styled.div`
+    margin-left: 22px;
     width: 16%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:1080px){
+        width: 20%;
+    }
+    @media (max-width:980px){
+        width: 24%;
+    }
+    @media (max-width:768px){
+        width: 26%;
+    }
+    @media (max-width:640px){
+        width: 28%;
+    }
+    @media (max-width:480px){
+        width: 36%;
+    }
+    @media (max-width:360px){
+        width: 40%;
+    }
 `;
 const IconContainer = styled.div`
-    width: 50px;
+    width: 55px;
     margin-right: 10px;
-    height: 50px;
+    height: 45px;
     background-color: #d2814a;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:1080px){
+        width: 50px;
+    }
+    @media (max-width:768px){
+        width: 45px;
+        height: 45px;
+    }
+    @media (max-width:640px) {   
+        width: 43px;
+        height: 34px;
+    }
+    @media (max-width:540px){
+        width: 44px;
+    }
 `;
 const Icon = styled.img`
     display: block;
     width: 20px;
+    @media (max-width:768px){
+        width: 18px;
+    }
 `;
 const Examination = styled.h4`
     color: #545454;
@@ -140,10 +176,25 @@ const Examination = styled.h4`
     font-weight: 600;
     margin: 0;
     font-size: 18px;
+    @media (max-width:768px){
+        font-size: 16px;
+    }
 `;
 const Right = styled.div`
     width: 10%;
     padding-right: 32px;
+    @media (max-width:1080px){
+        width: 15%;
+    }
+    @media (max-width:768px){
+        width: 20%;
+    }
+    @media (max-width:540px){
+        width: 25%;
+    }
+    @media (max-width:480px){
+        width: 30%;
+    }
 `;
 const Div = styled.div`
     display: flex;
@@ -156,10 +207,25 @@ const Div = styled.div`
 const Span = styled.span`
     text-transform: capitalize;
     font-size: 14px;
+    @media (max-width:540px){ 
+        font-size: 13px;
+    }
+    @media (max-width:480px){
+        font-size: 12px;
+    }
 `;
 const Time = styled.small`
     font-weight: 800;
     font-size: 20px;
+    @media (max-width:640px){
+        font-size: 18px;
+    }
+    @media (max-width:540px){ 
+        font-size: 16px;
+    }
+    @media (max-width:480px){
+        font-size: 14px;
+    }
 `;
 const InstDiv =styled.div`
     margin-top: 5px;
@@ -172,11 +238,46 @@ const Instructions = styled.h2`
     text-transform: capitalize;
     font-size: 40px;
     font-weight: 500;
+    @media (max-width:1080px){
+        font-size: 36px;
+    }
+    @media (max-width:980px)
+    { font-size: 33px;
+    }
+    @media (max-width:768px){
+        font-size: 27px;
+    }
+    @media (max-width:360px){
+        font-size: 21px;
+    }
 `;
 const Contents = styled.div`
     width: 40%;
     margin: 0px auto;
     padding: 125px 0;
+    @media (max-width:1280px){
+        width: 45%;
+    }
+    @media (max-width:1080px){
+        width: 49%;
+    }
+    @media (max-width:980px){
+        width: 60%;
+    }
+    @media (max-width:768px){
+        width: 68%;
+    }
+    @media (max-width:640px){
+        width: 77%;
+    }
+    @media (max-width:540px){
+        width: 90%;
+        padding: 35px 0;
+    }
+    @media (max-width:360px){
+        width: 100%;
+        padding: 55px 0;
+    }
 `;
 const Small = styled.span`
     color: #000;
@@ -191,6 +292,7 @@ const Li = styled.li`
     margin-bottom: 20px;
 `;
 const Round = styled.div`
+    max-width: 20px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -199,16 +301,38 @@ const Round = styled.div`
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    @media (max-width:980px){
+        width: 15px;
+        height: 15px;
+    }
+    @media (max-width:360px){
+        margin-right: 15px;
+    }
 `;
 const InnerRound = styled.div`
+    max-width: 15px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color:#0ea76f;
+    @media (max-width:980px){
+        max-width: 11px;
+        width: 11px;
+        height: 11px;
+    }
 `;
-const Points = styled.h5`
+const Points = styled.h6`
     color: #707473;
     margin: 0;
+    @media (max-width:1080px){
+        font-size: 13px;
+    }
+    @media (max-width:980px){
+        font-size: 12px;
+    }
+    @media (max-width:360px){
+        font-size: 11px;
+    }
 `;
 const Button = styled.div`
     display: flex;
@@ -237,6 +361,15 @@ const Exam = styled.div`
     top: 53%;
     left: 13%;
     align-items: center;
+    @media (max-width:980px){
+        left: 6%;
+    }
+    @media (max-width:768px){
+        left: 0;
+    }
+    @media (max-width:640px){
+        display: none;
+    }
 `;
 const Start = styled.div`
     width: 20px;

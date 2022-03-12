@@ -36,11 +36,9 @@ export default Congradulation;
 const Section = styled.section`
     backdrop-filter: blur(5px);
     display: flex;
-    /* transform: scale(0, 0); */
     position: fixed;
     top: 0;
     left: 0;
-
     align-items: center;
     width: 100%;
     height:100vh;
@@ -48,7 +46,6 @@ const Section = styled.section`
     transform : ${({cngrtsModal})=>cngrtsModal ? 'scale(1,1)' : 'scale(0,0)'};
     transition:.4s ease;
     z-index: 10000;
-    /* flex-direction: column; */
 `;
 const Wrapper = styled.div`
     width: 600px;
@@ -61,6 +58,26 @@ const Wrapper = styled.div`
     border-radius: 5px;
     background-position: bottom;
     background-size: cover;
+    @media (max-width:768px){
+        width: 510px;
+        height: 257px;
+    }
+    @media (max-width:640px){
+        width: 473px;
+        height: 239px;
+    }
+    @media (max-width:540px){
+        width: 432px;
+        height: 222px;
+    }
+    @media (max-width:480px){
+        width: 326px;
+        height: 197px;
+    }
+    @media (max-width:360px){
+        width: 310px;
+        height: 189px;
+    }
 `;
 const Container = styled.div`
     /* background-image: url(${Img3}); */
@@ -74,6 +91,13 @@ const RightDiv = styled.div`
     right: 25px;
     margin: 20px 7px;
     text-align: center;
+    @media (max-width:640px){
+        margin: 0px 7px;
+    }
+    @media (max-width:540px){
+        width: 43%;
+        right: 2px;
+    }
 `;
 const Title = styled.h4`
     color: #20aa77;
@@ -95,13 +119,30 @@ const Links = styled.div`
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
+    @media (max-width:540px){
+        margin: 14px auto;
+    }
+    @media (max-width:480px){
+        width: 86%;
+        font-size: 14px;
+    }
 `;
 const LeftDiv = styled.div`
     width: 66%;
     position: absolute;
     left: -59px;
     top: 2px;
-
+    @media (max-width:640px){
+        left: -29px;
+    }
+    @media (max-width:540px){
+        left: -19px;
+    }
+    @media (max-width:480px){
+        left: -14px;
+        width: 61%;
+        top: 24px;
+    }
 `;
 const Image = styled.img`
     display: block;

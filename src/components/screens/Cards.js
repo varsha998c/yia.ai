@@ -83,16 +83,16 @@ export default function Cards() {
                                 <Img src={item.image} alt="Image"/>
                             </ImageContainer>
                             <Div></Div>
-                                <CardDetails>
-                                    <Name>{item.name}</Name>
-                                    <Studies>{item.job}</Studies>
-                                    <ButtonDiv className='button'>
-                                        <Span>
-                                            <img src={item.icon} alt="Image" />
-                                        </Span>
-                                        <Small>Watch story</Small>
-                                    </ButtonDiv>
-                                </CardDetails>
+                            <CardDetails>
+                                <Name>{item.name}</Name>
+                                <Studies>{item.job}</Studies>
+                                <ButtonDiv className='button' >
+                                    <Span>
+                                        <img src={item.icon} alt="Image" />
+                                    </Span>
+                                    <Small href='#'>Watch story</Small>
+                                </ButtonDiv>
+                            </CardDetails>
                         </InnerCards>
                     ))}
             </CardDiv>
@@ -165,6 +165,12 @@ const InnerCards = styled.li`
     margin-bottom :30px;
     margin-right: 20px;
     position: relative;
+    &:hover {
+        .button {
+            opacity:1 ;
+            height: 35px;
+        }
+    }
     &:nth-child(4) {
         margin-right: 0;
         @media (max-width:1280px) {
@@ -198,7 +204,8 @@ const InnerCards = styled.li`
     }
 `;
 const Div = styled.div`
-    height: 100%;background: linear-gradient(rgba(248, 248, 248, 0) 0%, rgb(0, 0, 0) 100%);
+    height: 100%;
+    background: linear-gradient(rgba(248, 248, 248, 0) 0%, rgb(0, 0, 0) 100%);
     opacity: 0.4;
     position: absolute;
     width: 100%;
@@ -229,11 +236,11 @@ const CardDetails = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 10px;
-    &:hover {
+    /* &:hover {
         .button {
             height: 35px;
         }
-    }
+    } */
     @media (max-width:980px) {
         bottom: 15px;
     }
@@ -313,7 +320,7 @@ const Span = styled.span`
         }
     }
 `;
-const Small = styled.span`
+const Small = styled.a`
     text-decoration: none;
     color: #000;
     text-transform: uppercase;

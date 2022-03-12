@@ -1,55 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import Img1 from '../../assets/images/brands-360.svg';
-import Img2 from '../../assets/images/presents.svg';
-import Img3 from '../../assets/images/tefun-logo.svg';
-import Img4 from '../../assets/images/right-arrow.svg';
-import Img18 from '../../assets/images/main-banner.png';
 import {Link} from 'react-router-dom';
-import lakh from '../../assets/images/5.png';
-import Students from '../../assets/images/7.png';
-import free from '../../assets/images/10.png';
-import tech from '../../assets/images/11.png';
-import Imp from '../../assets/images/12.png';
-import know from '../../assets/images/14.png';
-import techh from '../../assets/images/15.png';
-import ed from '../../assets/images/16.png';
-import Kerala from '../../assets/images/8.png';
-import pro from '../../assets/images/17.png';
-
-
+import Img2 from "../../assets/images/main-banner.png";
 
 export default function LandingPage() {
   return (
     <LandingSection className="container">
         <Wrapper>
             <ImgContainer>
-                <Img src={Img1} alt="Image" />
-                <Presents src={Img2} alt="Image" />
-                <Tefun src={Img3} alt="Image" />
+                <Img src={require("../../assets/images/brands-360.svg").default} alt="Image" />
+                <Presents src={require("../../assets/images/presents.svg").default} alt="Image" />
+                <Tefun src={require('../../assets/images/tefun-logo.svg').default} alt="Image" />
             </ImgContainer>
             <ImageContainer>
-                <Image src={Kerala} alt="Image" />
-                <Image src={lakh} alt="Image" />
-                <Image src={Students} alt="Image" />
+                <Image src={require("../../assets/images/8.png")} alt="Image" />
+                <Image src={require("../../assets/images/5.png")} alt="Image" />
+                <Image src={require("../../assets/images/7.png")} alt="Image" />
             </ImageContainer>
             <ImgDiv>
-                <Image src={free} alt="Image" />
-                <Image src={tech} alt="Image" />
-                <Image src={Imp} alt="Image" />
-                <Image src={know} alt="Image" />
+                <Image src={require("../../assets/images/10.png")} alt="Image" />
+                <Image src={require("../../assets/images/11.png")} alt="Image" />
+                <Image src={require("../../assets/images/12.png")} alt="Image" />
+                <Image src={require("../../assets/images/14.png")} alt="Image" />
             </ImgDiv>
             <Container>
-                <Image className='tech' src={techh} alt="Image" />
-                <Image className='edu' src={ed} alt="Image" />
-                <Image className='pro' src={pro} alt="Image" />
+                <Image className='tech' src={require("../../assets/images/15.png")} alt="Image" />
+                <Image className='edu' src={require("../../assets/images/16.png")} alt="Image" />
+                <Image className='pro' src={require("../../assets/images/17.png")} alt="Image" />
             </Container>
             <Button>
                 <Link to="/videopage">
                     <a href="" className='learning'>start learning
                     </a>
                     </Link>
-                <RightArrow className='right' src={Img4} alt="Image" />
+                <RightArrow className='right' src={require("../../assets/images/right-arrow.svg").default} alt="Image" />
             </Button>  
         </Wrapper>
     </LandingSection>
@@ -65,11 +49,18 @@ const Wrapper = styled.div`
     width: 95%;
     margin: 0 auto;
     border-radius: 10px;
-    background-image: url(${Img18});
+    background-image: url(${Img2});
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     padding: 30px 0;
+    @media (max-width:1080px){
+        padding: 1px 0;
+    }
+    @media (max-width:980px){
+        height: 94vh;
+        margin: 0px auto;
+    }
 `;
 const ImgContainer = styled.div`
     display: flex;
@@ -79,18 +70,42 @@ const ImgContainer = styled.div`
     padding-top: 40px;
     justify-content: center;
     align-items: center;
+    @media (max-width:1280px) {
+        margin: 5px auto 10px;
+    }
+    @media (max-width:980px){
+        width: 85%;
+    }
+    @media (max-width:768px){
+        padding-top:0;
+    }
 `;
 const Img = styled.img`
     width: 255px;
     text-align: center;
     margin-bottom: 25px;
+    @media (max-width:980px){
+        width: 230px;
+    }
+    @media (max-width:768px){
+        width: 210px;
+    }
 `;
 const Presents = styled.img`
     width: 182px;
     margin-bottom: 25px;
+    @media (max-width:768px) {
+        width: 170px;
+    }
 `;
 const Tefun = styled.img`
     width: 195px;
+    @media (max-width:1080px){
+        width: 184px;
+    }
+    @media (max-width:768px){
+        width: 170px;
+    }
 `;
 const ImageContainer = styled.div`
     display: flex;
@@ -98,6 +113,18 @@ const ImageContainer = styled.div`
     margin: 14px auto;
     flex-wrap: wrap;
     justify-content: center;
+    @media (max-width:980px){
+        width: 85%;
+    }
+    @media (max-width:768px){
+        width: 76%;
+    }
+    @media (max-width:640px){
+        width: 80%;
+    }
+    @media (max-width:540px){
+        width: 84%;
+    }
 `;
 const Image = styled.img`
     width: 205px;
@@ -107,18 +134,57 @@ const Image = styled.img`
     &:last-child {
         margin-right: 0;
     }
+    @media (max-width:1080px){
+        width: 200px;
+        margin-right: 13px;
+    }
+    @media (max-width:980px){
+        width: 160px;
+    }
+    @media (max-width:768px){
+        width: 137px;
+        margin-right: 7px;
+        height: 53px;
+    }
+    @media (max-width:640px){
+        width: 120px;
+        height: 50px;
+    }
+    @media (max-width:540px){
+        width: 92px;
+        height: 39px;
+    }
+    @media (max-width:480px){
+        width: 77px;
+        height: 30px;
+    }
+    @media (max-width:360px){
+        width: 69px;
+    }
 `;
 const Container = styled.div`
     width: 62%;
     margin: 10px auto;
     display: flex;
     justify-content: center;
+    @media (max-width:768px){
+        width: 69%;
+    }
+    @media (max-width:640px){
+        width: 79%;
+    }
 `;
 const ImgDiv = styled.div`
     width: 62%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    @media (max-width:980px){
+        width: 90%;
+    }
+    @media (max-width:640px){
+        width: 95%;
+    }
 `;
 const Button = styled.button`
     height: 50px;
@@ -130,6 +196,16 @@ const Button = styled.button`
     border-radius: 5px;
     border: none;
     background-image: linear-gradient(to right,#63bb4c 0%,#40ab79 51%,#1e9ba6 100%);
+    @media (max-width:768px){
+        width: 182px;
+    }
+    @media (max-width:540px){
+        height: 42px;
+        width: 162;
+    }
+    @media (max-width:480px){
+        margin-top: 69px;
+    }
 `;
 const RightArrow = styled.img`
     margin-left: 20px;

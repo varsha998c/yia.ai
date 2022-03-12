@@ -71,7 +71,7 @@ const Section = styled.div`
     position: relative;
 `;
 const DataSection = styled.section`
-    padding: 30px;
+    padding: 120px 30px 30px 30px;
     height: 80vh;
     display: flex;
     width: 93%;
@@ -79,6 +79,9 @@ const DataSection = styled.section`
     align-items: center;
     justify-content: center;
     background-image : linear-gradient(to bottom,  #f8fdf9 21%, #fff 100%);
+    @media (max-width:480px){
+        padding: 120px 13px;
+    }
 `;
 const StudentDiv = styled.div`
     width: 300px;
@@ -88,6 +91,9 @@ const StudentDiv = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 5px;
+    @media (max-width:480px){
+        margin-top: 100px;
+    }
 `;
 const TitleSec = styled.div`
     margin-bottom: 15px;
@@ -133,6 +139,16 @@ const InnerDiv = styled.div`
     position: absolute;
     top: 80px;
     left: 21px;
+    @media (max-width:980px){
+        width: 102px;
+        left:1px;
+    }
+    @media (max-width:640px){
+        width: 85px;
+    }
+    @media (max-width:480px){
+        width:70px;
+    }
 `;
 const Img = styled.img`
     width: 100%;

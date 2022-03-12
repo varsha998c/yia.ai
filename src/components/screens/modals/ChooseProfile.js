@@ -114,9 +114,45 @@ const SelectDiv = styled.div`
     position: absolute;
     right: 33%;
     top: 89px;
+    @media (max-width:1280px){
+        width:38%;
+    }
+    @media (max-width:1080px){
+        width: 40%;
+    }
+    @media (max-width:980px){
+        width: 45%;
+        right: 27%;
+    }
+    @media (max-width:768px){
+        width: 52%;
+        right: 23%;
+    }
+    @media (max-width:640px){
+        width: 56%;
+        right: 23%;
+    }
+    @media (max-width:540px){
+        width: 61%;
+        right: 19%;
+    }
+    @media (max-width:480px){
+        width: 77%;
+        right: 11%;
+    }
+    @media (max-width:360px){
+        width: 89%;
+        right: 5%;
+    }
 `;
 const InnerDiv = styled.div`
     width: 115px;
+    @media (max-width:540px){
+        width: 93px;
+    }
+    @media (max-width:480px){
+        width: 72px;
+    }
 `;
 const Img = styled.img`
     width: 100%;
@@ -127,6 +163,15 @@ const Heading = styled.h3`
     margin: 20px 0 0 0;
     font-size: 27px;
     font-weight: 500;
+    @media (max-width:1080px){
+        font-size: 25px;
+    }
+    @media (max-width:980px){
+        font-size: 24px;
+    }
+    @media (max-width:768px){
+        font-size: 20px;
+    }
 `;
 const Choose = styled.span`
     color: #000;
@@ -138,14 +183,29 @@ const Card = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:980px){
+        padding: 0 10px;
+    }
 `;
 const Title = styled.h4`
     color: #707070;
     font-weight: 500;
+    @media (max-width:768px){
+        font-size: 16px;
+    }
+    @media (max-width:480px){
+        font-size: 15px;
+    }
 `;
 const Call = styled.span`
     color: #60c7a7;
     font-weight: 600;
+    @media (max-width:768px){
+        font-size: 15px;
+    }
+    @media (max-width:480px){
+        font-size: 14px;
+    }
 `;
 const Ul = styled.ul`
     display: flex;
@@ -212,6 +272,10 @@ const NotMe = styled.div`
         color: #000;
         font-weight: 600;
     }
+    @media (max-width:768px){
+        width: 100px;
+        height:40px;
+    }
 `;
 const Enroll = styled.div`
     width: 116px;
@@ -231,4 +295,9 @@ const Enroll = styled.div`
         #40ab79 51%,
         #1e9ba6 100%
     );
+}
+    @media (max-width:768px){
+        width: 100px;
+        height:40px;
+    }
 `;

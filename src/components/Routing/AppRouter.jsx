@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import Explore from "../screens/Explore";
@@ -13,6 +13,7 @@ import ChooseProfile from "../screens/modals/ChooseProfile";
 import ExaminationModal from "../screens/modals/ExaminationModal";
 import ExamComplete from "../screens/modals/ExamComplete";
 import ExamStart from "../screens/modals/ExamStart";
+import CollegeDetailView from "../screens/modals/CollegeDetailView";
 
  
 function AppRouter() {
@@ -27,6 +28,7 @@ function AppRouter() {
                <Route path="/newstudentdata" element={<NewStudentData/>}/>
                <Route path="/congrats" element={<Congradulation/>}/>
                <Route path="/landing" element={<LandingPage/>}/>
+               <Route path="/college" element={<CollegeDetailView/>} />
                <Route path="/videopage" element={<Video_page/>}/>
                <Route path="/profile" element={<ProfileModal/>}/>
                <Route path="/exam" element={<ExaminationModal/>}/>  

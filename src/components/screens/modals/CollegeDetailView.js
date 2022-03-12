@@ -33,7 +33,7 @@ export default CollegeDetailView;
 
 
 const CollegeDetailSection = styled.section`
-    backdrop-filter: blur(10px);
+    background-color: #fff;
     display: flex;
     align-items: center;
     width: 100%;
@@ -58,7 +58,21 @@ const Wrapper = styled.div`
     background-position: bottom;
     background-size: cover;
     box-shadow: 1px 3px 25.3px #8888;
-
+    @media (max-width:640px){
+        width: 506px;
+    }
+    @media (max-width:540px){
+        width: 462px;
+        height: 281px;
+    }
+    @media (max-width:480px){
+        width: 347px;
+        height: 242px;
+    }
+    @media (max-width:360px){
+        width: 309px;
+        height: 235px;
+    }
 `;
 const Container = styled.div`
     /* background-image: url(${Img3}); */
@@ -71,12 +85,20 @@ const RightDiv = styled.div`
     right: 25px;
     margin: 20px 7px;
     text-align: center;
+    @media (max-width:480px){
+        width: 53%;
+        margin: 0;
+    }
 `;
 const Title = styled.h4`
     color: #20aa77;
     font-size: 30px;
     margin: 25px 0 0 0;
     text-transform: none;
+    @media (max-width:360px){
+        font-size: 23px;
+        margin: 31px 0 0 0;
+    }
 `;
 const Description = styled.p`
     color: #577d7e;
@@ -97,13 +119,25 @@ const Board = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width:480px){
+        margin: 10px 22px;
+    }
+    @media (max-width:360px){
+        font-size: 12px;
+    }
 `;
 const LeftDiv = styled.div`
     width: 43%;
     position: absolute;
     left: 33px;
     top: 2px;
-
+    @media (max-width:640px){
+        top: 39px;
+    }
+    @media (max-width:480px){
+        top: 53px;
+        left: 3px;
+    }
 `;
 const Image = styled.img`
     display: block;

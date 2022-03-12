@@ -72,6 +72,7 @@ const LoginSection = styled.section`
     position: absolute;
     right: 0;
     top: 0;
+    height: 100vh;
     z-index: 200;
     animation-delay: .3s;
     animation: 0.4s ease 0s 1 normal none running slide-box;
@@ -82,19 +83,38 @@ const LoginSection = styled.section`
     @media (max-width:1280px){
         width:600px;
     }
+    @media(max-width:640px){
+        width: 420px;
+    }
+    @media (max-width:480px){
+        width: 361px;
+    }
+    @media (max-width:360px){
+        width:320px;
+    }
 `;
 const Login = styled.div`
     width: 80%;
     padding: 0 50px;
     background: url(${Img6}) no-repeat;
+    @media (max-width:640px){
+        width: 86%;
+        padding: 0px 28px;
+    }
+    @media (max-width:360px){
+        width: 86%;
+        padding: 0px 21px;
+    }
 `;
 const ContentDiv = styled.div`
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
-    border-bottom: 1px dotted #333;
+    height: 70vh;
+    @media (max-width:640px){
+        padding-top:60px;
+    }
 `;
 const Img = styled.img`
         width: 35px;
@@ -103,6 +123,9 @@ const Title = styled.h4`
     margin: 0;
     font-size: 30px;
     font-weight: 500;
+    @media (max-width:640px){
+        font-size:25px;
+    }
 `;
 const Paragraph = styled.p`
     color: #333333;
@@ -110,6 +133,10 @@ const Paragraph = styled.p`
     width: 70%;
     font-size: 17px;
     font-weight: 600;
+    @media (max-width:360px){
+        width: 100%;
+        font-size: 14px;
+    }
 `;
 const FormDiv = styled.div`
     display: flex;
@@ -158,7 +185,10 @@ const NextButton = styled.button`
 const FooterDiv = styled.div`
     text-align: center;
     margin-top: 25px;
-  
+    border-top: 1px dotted #333;
+    @media (max-width:480px){
+        font-size: 12px;
+    }
 `;
 const CancelDiv = styled(Link)`
     width: 20px;
@@ -167,6 +197,10 @@ const CancelDiv = styled(Link)`
     top: 0;
     left: -20px;
     cursor: pointer;
+    @media (max-width:480px){
+        top: 5px;
+        left: 4px;
+    }
 `;
 const Cancel = styled.img`
     width: 100%;

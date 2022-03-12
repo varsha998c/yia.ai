@@ -1,0 +1,7 @@
+<svg id="tick_with_round" data-name="tick with round" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="Ellipse_4001" data-name="Ellipse 4001" fill="#fff" stroke="#1ec569" stroke-width="1.5">
+    <circle cx="7" cy="7" r="7" stroke="none"/>
+    <circle cx="7" cy="7" r="6.25" fill="none"/>
+  </g>
+  <path id="Path_79590" data-name="Path 79590" d="M-20049.553-15522.164l1.891,2.18,3.965-3.961" transform="translate(20053.553 15529.006)" fill="none" stroke="#1ec569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

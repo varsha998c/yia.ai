@@ -71,14 +71,14 @@ function NewPassword(handleModal) {
     return (
     <Container>
     <Overlay></Overlay>
-    <Section>
+    {/* <Section> */}
         <MainContainer>
             <TopContainer>
                 <ImageContainer>
                     <Round src={require("../../../assets/images/Group 2608.svg").default} alt="Round Pic" />
                 </ImageContainer>
-                <Heading>A strong password will secure your account</Heading>
-                <SubHeading>Follow the simple steps to create a strong password for your account</SubHeading>
+                <Heading>Password</Heading>
+                <SubHeading>Enter your password for this account</SubHeading>
             </TopContainer>
             <MiddleContainer>
                 <InputField placeholder= "Enter Password"  required type={values.showPassword ? "text" : "password"}
@@ -114,7 +114,7 @@ function NewPassword(handleModal) {
             <a href="#" className="term">Terms of service</a>
         </FooterDiv>
         </MainContainer>  
-    </Section>
+    {/* </Section> */}
     <CancelDiv to="/#">
         <Cancel src={Img7} alt="Image" />
     </CancelDiv>
@@ -138,12 +138,12 @@ const Overlay = styled.div`
     max-height: 100vh;
     filter: blur(2px);
 `;
-const Section =styled.div`
-    width: 500px;
-    padding: 0 50px;
-    background-color: #fff;
-    animation-delay: .3s;
-`;
+// const Section =styled.div`
+//     width: 500px;
+//     padding: 0 50px;
+//     background-color: #fff;
+//     animation-delay: .3s;
+// `;
 const MainContainer = styled.div`
     text-align: left;
     width: 500px;
@@ -158,6 +158,23 @@ const MainContainer = styled.div`
     @keyframes slide-box {
         from {right:-200px;}
         to {right:2px;}
+    }
+    /* @media (max-width:1280px){
+        width:600px;
+        height: 60vh;
+    } */
+    @media (max-width:640px){
+        width: 428px;
+    }
+    @media (max-width:540px){
+        width: 425px;
+    }
+    @media (max-width:480px){
+        width: 361px;
+        padding-top: 164px;
+    }
+    @media (max-width:360px){
+        width: 321px;
     }
 `;
 const TopContainer = styled.div`
@@ -175,11 +192,11 @@ const Round = styled.img`
     width: 100%;
 `;
 const Heading = styled.h5`
-    font-size: 24px;
+    font-size: 25px;
     margin: 10px 0;
 `;
 const SubHeading = styled.p`
-
+    font-weight: 500;
 `;
 const MiddleContainer = styled.div`
     padding: 0 30px;
@@ -192,6 +209,9 @@ const MiddleContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:360px){
+        width: 66%;
+    }
 `;
 const InputField = styled.input`
     width: 100%;
@@ -227,6 +247,9 @@ const  Validation = styled.div`
     flex-direction: column;
     padding: 30px;
     padding-bottom: 10px;
+    @media (max-width:480px){
+        display: none;
+    }
 `;
 const  Span = styled.span`
     margin-bottom: 20px;
@@ -262,8 +285,12 @@ const  CheckImage = styled.img`
 const BottomContainer = styled.div`
     padding: 0 30px 40px;
     text-align: center;
-    font-size: 12px;
-    border-bottom: 1px dotted #333;   
+    font-size: 12px;   
+    @media (max-width:480px){
+        width: 91%;
+        margin: 0 auto 150px;
+        padding: 0;
+    }
 `;
 const Button = styled.button`
     border: none;
@@ -274,8 +301,8 @@ const Button = styled.button`
         #40ab79 51%,
         #1e9ba6 100%
     );
-    font-size: 20px;
-    margin-top: 40px;
+    font-size: 14px;
+    margin-top: 67px;
     border: none;
     border-radius: 7px;
     height: 55px;
@@ -288,11 +315,23 @@ const Button = styled.button`
         #40ab79 51%,
         #1e9ba6 100%
     );
-        }
+    }
 `;
 const FooterDiv = styled.div`
     text-align: center;
     margin-top: 25px;
+    border-top: 1px dotted #333;
+    @media (max-width:1280px){
+        width: 80%;
+        margin: 0 auto;
+    }
+    @media (max-width:1080px){
+        width: 91%;
+        margin: 0 auto;
+    }
+    @media (max-width:360px){
+        font-size:12px;
+    }
 `;
 const CancelDiv = styled(Link)`
     width: 20px;
@@ -301,6 +340,26 @@ const CancelDiv = styled(Link)`
     top: 0;
     right: 33%;
     cursor: pointer;
+    @media (max-width:1280px){
+        top: 7px;
+        right: 47%;
+    }
+    @media (max-width:1080px){
+        right: 51%;
+    }
+    @media (max-width:980px){
+        right: 66%;
+    }
+    @media (max-width:768px){
+        right: 79%;
+    }
+    @media (max-width:540px){
+        right: 89%;
+        top: 6px;
+    }
+    @media (max-width:480px){
+        right: 94%;
+    }
 `;
 const Cancel = styled.img`
     width: 100%;

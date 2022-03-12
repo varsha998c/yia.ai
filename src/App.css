@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+body {
+    font-family: 'Ibarra Real Nova', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Gorditas&family=Ibarra+Real+Nova&display=swap');
 
 .App-logo {
   height: 40vmin;
@@ -66,7 +70,7 @@ li.watch {
 a{
   text-decoration: none;
   color: #000;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 div.one {
@@ -294,8 +298,50 @@ img.pro {
 }
 a.learning {
     color: #fff;
-    text-transform: capitalize;
     font-size: 17px;
+}
+
+@media (max-width:640px){
+  img.tech {
+    width: 48px;
+    height: 36px;
+  }
+  img.pro {
+    width: 117px;
+    height: 36px;
+  }
+  img.edu {
+    width: 82px;
+    height: 36px;
+  }
+}
+@media (max-width:540px){
+  img.tech {
+    height: 29px;
+  }
+  img.pro {
+    height: 29px;
+  }
+  img.edu {
+    height: 29px;
+  }
+  a.learning {
+    font-size: 15px;
+  }
+  img.ad {
+    height: 100px;
+  }
+}
+@media (max-width:480px){
+  img.tech {
+    height: 22px;
+  }
+  img.pro {
+    height: 22px;
+  }
+  img.edu {
+    height: 22px;
+  }
 }
 /* a.color {
   width: 25px;

@@ -55,6 +55,12 @@ const Wrapper = styled.div`
 `;
 const ImgContainer = styled.div`
     width: 75px;
+    @media (max-width:480px){
+        width: 67px;
+    }
+    @media (max-width:360px){
+        width: 65px;
+    }
 `;
 const Img = styled.img`
     display: block;
@@ -65,11 +71,39 @@ const RightDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:1280px){
+        width:12%;
+    }
+    @media (max-width:1080px){
+        width:14%;
+    }
+    @media (max-width:980px){
+        width:21%;
+    }
+    @media (max-width:768px){
+        width:22%;
+    }
+    @media (max-width:640px){
+        width:26%;
+    }
+    @media (max-width:480px){
+        width:34%;
+    }
+    @media (max-width:360px){
+        width:39%;
+    }
+
 `;
 const AlertIcon = styled.div`
     width: 20px;
     padding-right: 20px;
     border-right: 1px solid #000;
+    @media (max-width:768px){
+        display:none;
+    }
+    @media (max-width:540px){
+        display: none;
+    }
 `;
 const Name = styled.div`
     display: flex;

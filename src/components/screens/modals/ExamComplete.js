@@ -45,11 +45,20 @@ const InnerDiv = styled.div`
     width: 30%;
     margin: 0 auto;
     padding-top: 20px;
+    @media (max-width:768px){
+        width: 40%;
+    }
+    @media (max-width:480px){
+        width: 52%;
+    }
 `;
 const TefunDiv = styled.div`
     padding-top: 80px;
     width: 150px;
     margin: 0 auto;
+    @media (max-width:360px){
+        padding-top: 13px;
+    }
 `;
 const Img = styled.img`
     display: block;
@@ -78,6 +87,4 @@ const Button = styled.div`
     align-items: center;
     color: #fff;
     background-image: linear-gradient(to right,#63bb4c 0%,#40ab79 51%,#1e9ba6 100%);
-
-
 `;
